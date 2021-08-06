@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task_removing.html 
+keywords: working environments, removing, remove, rediscover 
+summary: Cloud Manager 管理者は、 Cloud Volumes ONTAP の作業環境を削除して、別のシステムに移動したり、検出の問題をトラブルシューティングしたりできます。 
+---
+= Cloud Volumes ONTAP の動作環境を削除しています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager 管理者は、 Cloud Volumes ONTAP の作業環境を削除して、別のシステムに移動したり、検出の問題をトラブルシューティングしたりできます。
+
+Cloud Volumes ONTAP の作業環境を削除すると、 Cloud Manager から削除されます。Cloud Volumes ONTAP システムは削除されません。作業環境は後で再検出できます。
+
+Cloud Manager から作業環境を削除すると、次のことが可能になります。
+
+* 別のテナントで再検出します
+* 別の Cloud Manager システムから再検出します
+* 初期検出中に問題が発生した場合は、再検出します
+
+
+.手順
+. Cloud Manager コンソールの右上にあるタスクドロップダウンリストをクリックし、 * Tools * を選択します。
+. [ ツール ] ページで、 [* 起動 *] をクリックします。
+. 削除する Cloud Volumes ONTAP の作業環境を選択します。
+. [ レビューと承認 ] ページで、 [* 移動 ] をクリックします。
+
+
+Cloud Manager は、作業環境を削除します。ユーザーは、この作業環境をいつでも [ 作業環境 ] ページから再検出できます。

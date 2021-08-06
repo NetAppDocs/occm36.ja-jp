@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task_changing_volume_view.html 
+keywords: volume view, changing, selecting, switching, views 
+summary: Cloud Manager のボリュームビューに切り替えることができます。これにより、 Cloud Volumes ONTAP ストレージシステムを管理しなくても AWS でボリュームを作成できます。 
+---
+= ボリュームビューに変更しています
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager には、ハイブリッドクラウド全体でストレージシステムを管理するためのストレージシステムビューと、ストレージシステムを管理せずに AWS でボリュームを作成するためのボリュームビューの 2 つの管理ビューがあります。これらのビューを切り替えることはできますが、 1 つのビューでニーズを満たす必要があるため、これらのインスタンスはまれです。
+
+ボリュームビューの詳細については、を参照してください link:concept_storage_management.html#simplified-storage-management-using-the-volume-view["ボリュームビューを使用してストレージ管理を簡易化"]。
+
+.手順
+. Cloud Manager コンソールの右上にあるメニューをクリックし、 * View Selection * をクリックします。
+. View Selection （選択の表示）ページで、 * Storage System View （ストレージシステムビュー） * を選択し、 * Switch （スイッチ） * をクリックします。
+
+
+Cloud Manager がボリュームビューに切り替わります。

@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: concept_overview.html 
+keywords: overview, concepts, features, use case 
+summary: OnCommand Cloud Manager では、クラウドストレージにエンタープライズクラスの機能を提供する Cloud Volumes ONTAP を導入し、ネットアップ上に構築されたハイブリッドクラウド間でデータを簡単にレプリケートできます。 
+---
+= Cloud Manager と Cloud Volumes ONTAP の概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+OnCommand Cloud Manager では、クラウドストレージにエンタープライズクラスの機能を提供する Cloud Volumes ONTAP を導入し、ネットアップ上に構築されたハイブリッドクラウド間でデータを簡単にレプリケートできます。
+
+
+
+== クラウドマネージャ
+
+Cloud Manager は、シンプルさを念頭に置いて構築されています。Cloud Volumes ONTAP のセットアップ手順を順を追って説明します。ストレージプロビジョニングの簡易化と容量管理の自動化を実現し、ハイブリッドクラウド全体でのドラッグアンドドロップによるデータレプリケーションを可能にすることで、データ管理を簡易化します。
+
+Cloud Manager は、 Cloud Volumes ONTAP の導入と管理に必要ですが、オンプレミスの ONTAP クラスタのストレージの検出とプロビジョニングも可能です。これにより、クラウドとオンプレミスのストレージインフラを一元管理できます。
+
+Cloud Manager は、クラウドまたはネットワークで実行できます。 Cloud Volumes ONTAP を導入するネットワークに接続するだけで済みます。次の図は、 AWS で実行されている Cloud Manager と、 AWS と Azure での Cloud Volumes ONTAP システムの管理を示しています。また、ハイブリッドクラウド全体のデータレプリケーションも示しています。
+
+image:diagram_cloud_manager_overview.png["Cloud Manager で管理できるハイブリッドクラウド全体のコンポーネントを示しています。 EC2 コンピューティングの EBS ストレージとして機能する Cloud Volumes ONTAP システム、 Azure ストレージを仮想マシンに提供する Cloud Volumes ONTAP システム、ハイブリッドクラウド環境とマルチクラウド環境全体のデータレプリケーションです。"]
+
+https://www.netapp.com/us/products/data-infrastructure-management/cloud-manager.aspx["Cloud Manager の詳細については、こちらをご覧ください"^]
+
+
+
+== Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP は、 ONTAP データ管理ソフトウェアをクラウドで実行するソフトウェア専用のストレージアプライアンスです。Cloud Volumes ONTAP は、本番ワークロード、ディザスタリカバリ、 DevOps 、ファイル共有、データベース管理に使用できます。
+
+Cloud Volumes ONTAP では、次の主要な機能を使用して、エンタープライズストレージをクラウドに拡張します。
+
+* ストレージの効率化：組み込みのデータ重複排除機能、データ圧縮機能、シンプロビジョニング機能、クローニング機能を活用して、ストレージコストを最小限に抑えます。
+* 高可用性は、クラウド環境で障害が発生した場合にエンタープライズクラスの信頼性と継続的な運用を実現します。
+* Data Replication Cloud Volumes ONTAP は、ネットアップの業界をリードするレプリケーションテクノロジである SnapMirror を活用してオンプレミスデータをクラウドにレプリケートするため、複数のユースケースでセカンダリコピーを簡単に使用できます。
+* アプリケーションをオフラインにすることなく、オンデマンドでハイパフォーマンスストレージプールと低パフォーマンスストレージプールの間のデータ階層化スイッチを切り替えます。
+* アプリケーションの整合性 NetApp SnapCenter を使用して、 NetApp Snapshot コピーの整合性を確保します。
+
+
+
+NOTE: Cloud Volumes ONTAP 機能のライセンスは、 ONTAP Volume Encryption を除く に含まれています。
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["サポートされている Cloud Volumes ONTAP 構成を表示します"^]
+
+https://www.netapp.com/us/cloud/ontap-cloud-native-product-details["Cloud Volumes ONTAP の詳細については、こちらを参照してください"^]

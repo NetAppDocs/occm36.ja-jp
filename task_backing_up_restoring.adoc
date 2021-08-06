@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: task_backing_up_restoring.html 
+keywords: backing up, back up, backup, restore, restoring 
+summary: Cloud Manager では、データベースのバックアップとリストアを実行して、構成を保護し、問題のトラブルシューティングを行うことができます。 
+---
+= Cloud Manager のバックアップとリストア
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager では、データベースのバックアップとリストアを実行して、構成を保護し、問題のトラブルシューティングを行うことができます。
+
+
+
+== Cloud Manager をバックアップしています
+
+Cloud Manager データベースを定期的にバックアップすることを推奨します。問題が発生した場合は、以前のバックアップから Cloud Manager をリストアできます。
+
+.手順
+. Cloud Manager コンソールの右上にあるタスクドロップダウンリストをクリックし、 * Tools * を選択します。
+. [ バックアップ ] をクリックします。
++
+image:screenshot_backup.gif["スクリーンショット： ［ ツール ］ ページの ［ バックアップ ］ ボタンが表示されます。"]
+
+. プロンプトが表示されたら、バックアップファイルを安全な場所に保存して、必要に応じてファイルを取得できるようにします。
+
+
+
+
+== バックアップからの Cloud Manager のリストア
+
+バックアップから Cloud Manager をリストアすると、既存のデータがバックアップのデータに置き換えられます。
+
+.手順
+. Cloud Manager コンソールの右上にあるタスクドロップダウンリストをクリックし、 * Tools * を選択します。
+. [* リストア ] をクリックします。
+. [OK] をクリックして確定します。
+. バックアップを選択します。
+
+
+Cloud Manager は、バックアップファイルからデータベースをリストアします。

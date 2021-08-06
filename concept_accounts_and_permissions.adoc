@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: concept_accounts_and_permissions.html 
+keywords: cloud provider accounts, aws, azure, aws account, azure account, keys, service principal, multiple, permissions, policy, policies, json, subscriptions 
+summary: Cloud Manager では、 Cloud Volumes ONTAP システムを導入するクラウドプロバイダアカウントを選択できます。Cloud Manager にアカウントを追加する前に、権限の要件を理解しておく必要があります。 
+---
+= クラウドプロバイダのアカウントと権限
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager では、 Cloud Volumes ONTAP システムを導入するクラウドプロバイダアカウントを選択できます。アカウントを Cloud Manager に追加する前に、権限要件を理解しておく必要があります。
+
+
+
+== AWS アカウントと権限
+
+すべての Cloud Volumes ONTAP システムを初期の AWS アカウントに導入することも、追加のアカウントを設定することもできます。
+
+
+
+=== 初期の AWS アカウント
+
+NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager インスタンスを起動する権限を持つ AWS アカウントを使用する必要があります。必要な権限は、に表示されます https://mysupport.netapp.com/cloudontap/iampolicies["AWS 向けの NetApp Cloud Central ポリシー"^]。
+
+Cloud Central は、 AWS で Cloud Manager インスタンスを起動すると、 IAM ロールとインスタンスのインスタンスプロファイルを作成します。また、 Cloud Manager に、その AWS アカウントで Cloud Volumes ONTAP を導入および管理する権限を与えるポリシーも付加します。 link:reference_permissions.html#what-cloud-manager-does-with-aws-permissions["Cloud Manager での権限の使用方法を確認します。"]。
+
+image:diagram_permissions_initial_aws.png["AWS アカウントに Cloud Central を導入していることを示す概念図。IAM ポリシーは、 Cloud Manager インスタンスに関連付けられている IAM ロールに割り当てられている。」"]
+
+Cloud Manager は、新しい作業環境を作成するときに、デフォルトでこのクラウドプロバイダアカウントを選択します。
+
+image:screenshot_accounts_select_aws.gif["Details & Credentials ページに Switch Account オプションを示すスクリーンショット。"]
+
+
+
+=== 追加の AWS アカウント
+
+別々の AWS アカウントで Cloud Volumes ONTAP を起動する場合は、どちらかを実行します link:task_adding_cloud_accounts.html#setting-up-and-adding-aws-accounts-to-cloud-manager["IAM ユーザまたは ARN に AWS キーを指定します 信頼できるアカウントのロール"]。次の図は、 2 つの追加アカウントを示しています。 1 つは、信頼されたアカウントの IAM ロールを介してアクセス許可を提供し、もう 1 つは IAM ユーザの AWS キーを使用してアクセス許可を提供します。
+
+image:diagram_permissions_multiple_aws.png["2 つの追加アカウントを示す概念図。各には IAM ポリシーが 1 つあり、 1 つは IAM ユーザに関連付けられ、もう 1 つは IAM ロールに関連付けられている。」"]
+
+そのあとで link:task_adding_cloud_accounts.html#adding-aws-accounts-to-cloud-manager["Cloud Manager にクラウドプロバイダアカウントを追加します"] IAM ロールの Amazon リソース名（ ARN ）、または IAM ユーザの AWS キーを指定します。
+
+別のアカウントを追加したら、新しい作業環境を作成するときにそのアカウントに切り替えることができます。
+
+image:screenshot_accounts_switch_aws.gif["[ 詳細と資格情報 ] ページで [ アカウントの切り替え ] をクリックした後に、クラウドプロバイダアカウントを選択する方法を示すスクリーンショット。"]
+
+
+
+== Azure アカウントと権限
+
+すべての Cloud Volumes ONTAP システムを最初の Azure アカウントに導入することも、追加のアカウントを設定することもできます。
+
+
+
+=== 最初の Azure アカウント
+
+NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager 仮想マシンを導入する権限を持つ Azure アカウントを使用する必要があります。必要な権限は、に表示されます https://mysupport.netapp.com/cloudontap/iampolicies["Azure 向けの NetApp Cloud Central ポリシー"^]。
+
+Cloud Central が Azure に Cloud Manager 仮想マシンを導入すると、が有効になります https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システムによって割り当てられた管理 ID"^] Cloud Manager 仮想マシンで、カスタムロールを作成して仮想マシンに割り当てます。この役割は、 Cloud Manager に、その Azure サブスクリプションで Cloud Volumes ONTAP を導入および管理する権限を付与します。 link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Cloud Manager での権限の使用方法を確認します。"]。
+
+image:diagram_permissions_initial_azure.png["クラウドセントラルの導入クラウドマネージャを Azure のアカウントとサブスクリプションに導入した場合の概念を示すイメージ。システムによって割り当てられた管理対象 ID が有効になり、カスタムロールが Cloud Manager 仮想マシンに割り当てられます。"]
+
+Cloud Manager は、新しい作業環境を作成するときに、デフォルトでこのクラウドプロバイダアカウントを選択します。
+
+image:screenshot_accounts_select_azure.gif["Details & Credentials ページに Switch Account オプションを示すスクリーンショット。"]
+
+
+
+=== 初期アカウント用の追加の Azure サブスクリプション
+
+管理対象 ID は、 Cloud Manager を起動したサブスクリプションに関連付けられます。別の Azure サブスクリプションを選択する場合は、が必要です link:task_adding_cloud_accounts.html#associating-additional-azure-subscriptions-with-a-managed-identity["管理対象 ID をこれらのサブスクリプションに関連付けます"]。
+
+
+
+=== 追加の Azure アカウント
+
+Cloud Volumes ONTAP を別々の Azure アカウントに導入する場合は、で必要な権限を付与する必要があります link:task_adding_cloud_accounts.html#setting-up-and-adding-azure-accounts-to-cloud-manager["Azure Active でサービスプリンシパルを作成およびセットアップする ディレクトリ"] を Azure アカウントごとに用意します。次の図は、 2 つの追加アカウントを示しています。各アカウントには、権限を提供するサービスプリンシパルとカスタムロールが設定されています。
+
+image:diagram_permissions_multiple_azure.png["「 Azure の最初のアカウントを示す概念図。カスタムのロールと管理対象 ID を使用して権限を付与します。また、カスタムのロールとサービスプリンシパルを使用して権限を付与するもう 1 つのアカウントも含まれます。」"]
+
+そのあとで link:task_adding_cloud_accounts.html#adding-azure-accounts-to-cloud-manager["Cloud Manager にクラウドプロバイダアカウントを追加します"] AD サービスプリンシパルの詳細を指定します。
+
+別のアカウントを追加したら、新しい作業環境を作成するときにそのアカウントに切り替えることができます。
+
+image:screenshot_accounts_switch_azure.gif["[ 詳細と資格情報 ] ページで [ アカウントの切り替え ] をクリックした後に、クラウドプロバイダアカウントを選択する方法を示すスクリーンショット。"]
+
+.市場への導入とオンプレミスの導入についてはどうでしょうか。
+****
+上記のセクションでは、 NetApp Cloud Central で推奨される導入方法について説明します。から Cloud Manager を導入することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 を使用できます 。
+
+どちらかのマーケットプレイスを使用する場合、アクセス権は同じ方法で提供されます。必要なのは、手動で IAM ロールまたは Cloud Manager の管理対象 ID を作成して設定し、追加のアカウントに権限を付与することだけです。
+
+オンプレミス環境では、 Cloud Manager システム用の IAM ロールや管理 ID を設定することはできませんが、追加のアカウントの場合と同様に権限を付与することはできます。
+
+****

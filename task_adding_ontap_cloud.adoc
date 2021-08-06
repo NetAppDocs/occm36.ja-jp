@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task_adding_ontap_cloud.html 
+keywords: discover, discovering, add, adding, existing 
+summary: 既存の Cloud Volumes ONTAP システムを検出して Cloud Manager に追加できます。 
+---
+= Cloud Manager に既存の Cloud Volumes ONTAP システムを追加
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+既存の Cloud Volumes ONTAP システムを検出して Cloud Manager に追加できます。これは、 Cloud Manager システムが使用不能になり、新しいシステムを起動したが、最近の Cloud Manager バックアップからすべての Cloud Volumes ONTAP システムをリストアできなかった場合に実行できます。
+
+Cloud Volumes ONTAP 管理者ユーザアカウントのパスワードを知っている必要があります。
+
+.手順
+. 作業環境ページで、 * 作業環境の追加 * をクリックします。
+. 検出で、 * Cloud Volumes ONTAP * を選択します。
++
+image:screenshot_discover_otc.gif["スクリーンショット：インスタンスを作成または検出するための Cloud Volumes ONTAP アイコンを表示します。"]
+
+. [Region] ページで、インスタンスが実行されているリージョンを選択し、インスタンスを選択します。
+. [ 資格情報 ] ページで、 Cloud Volumes ONTAP 管理者ユーザーのパスワードを入力し、 [ * 移動 ] をクリックします。
+
+
+Cloud Manager は、 Cloud Volumes ONTAP インスタンスをテナントに追加します。

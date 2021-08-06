@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task_setting_up_users_tenants.html 
+keywords: users, adding, creating, tenants 
+summary: Cloud Manager では、 Cloud Manager に Cloud Central ユーザを追加し、テナントを使用して作業環境を分離することができます。 
+---
+= ユーザとテナントを設定する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager では、 Cloud Manager に Cloud Central ユーザを追加し、テナントを使用して作業環境を分離することができます。
+
+
+
+== Cloud Manager へのユーザの追加
+
+クラウドマネージャシステムを使用する必要があるユーザを追加する場合は、 NetApp Cloud Central のアカウントにサインアップする必要があります。その後、 Cloud Manager にユーザを追加できます。
+
+.手順
+. ユーザがまだ NetApp Cloud Central にアカウントを持っていない場合は、 Cloud Manager システムへのリンクを送信し、サインアップしてもらいます。
++
+ユーザがアカウントにサインアップしたことを確認するまで待ちます。
+
+. Cloud Manager で、ユーザアイコンをクリックし、 * View Users * をクリックします。
+. [ 新しいユーザー * ] をクリックします。
+. ユーザーアカウントに関連付けられているメールアドレスを入力し、役割を選択して、 * 追加 * をクリックします。
+
+
+Cloud Manager システムにログインできるようになったことをユーザに通知します。
+
+
+
+== テナントを作成します
+
+テナントを使用すると、作業環境を別々のグループに分離できます。テナント内に 1 つ以上の作業環境を作成します。 link:concept_storage_management.html#storage-isolation-using-tenants["テナントに関する詳細情報"]。
+
+.手順
+. テナントアイコンをクリックし、 * テナントの追加 * をクリックします。
++
+image:screenshot_tenants_icon.gif["スクリーンショット：テナントアイコン（プッシュピン）とテナントを追加ボタンを示しています。このボタンは、 Cloud Manager コンソールの右上にあります。"]
+
+. 必要に応じて、名前、概要、およびコストセンターを入力します。
+. [ 保存（ Save ） ] をクリックします。
+
+
+この新しいテナントに切り替えて、このテナントにテナント管理者および作業環境管理者を追加できるようになりました。

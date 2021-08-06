@@ -1,0 +1,359 @@
+---
+sidebar: sidebar 
+permalink: reference_security_groups_azure.html 
+keywords: security group, security groups, rules, ports, azure, inbound, outbound, rules 
+summary: Cloud Manager は、 Cloud Manager と Cloud Volumes ONTAP が正常に動作するために必要なインバウンドルールとアウトバウンドルールを含む Azure セキュリティグループを作成します。テスト目的または独自のポートを使用する必要がある場合には、ポートを参照してください。 
+---
+= Azure のセキュリティグループルール
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager は、 Cloud Manager と Cloud Volumes ONTAP が正常に動作するために必要なインバウンドルールとアウトバウンドルールを含む Azure セキュリティグループを作成します。テスト目的でポートを参照したり、独自のセキュリティグループを使用したりする場合に使用します。
+
+
+
+== Cloud Manager のルール
+
+Security Group for Cloud Manager には、インバウンドルールとアウトバウンドルールの両方が必要です。
+
+
+
+=== Cloud Manager のインバウンドルール
+
+定義済みセキュリティグループのインバウンドルールの送信元は 0.0.0.0/0 です。
+
+[cols="10,10,80"]
+|===
+| プロトコル | ポート | 目的 
+
+
+| SSH | 22 | Cloud Manager ホストへの SSH アクセスを提供します 
+
+
+| HTTP | 80 | クライアント Web ブラウザから Cloud Manager Web コンソールへの HTTP アクセスを提供します 
+
+
+| HTTPS | 443 | クライアント Web ブラウザから Cloud Manager Web コンソールへの HTTPS アクセスを提供します 
+|===
+
+
+=== Cloud Manager のアウトバウンドルール
+
+Cloud Manager 用に事前定義されたセキュリティグループは、すべての発信トラフィックを開きます。これが可能な場合は、基本的なアウトバウンドルールに従います。より厳格なルールが必要な場合は、高度なアウトバウンドルールを使用します。
+
+
+
+==== 基本的なアウトバウンドルール
+
+Cloud Manager 用に事前定義されたセキュリティグループには、次のアウトバウンドルールが含まれています。
+
+[cols="20,20,60"]
+|===
+| プロトコル | ポート | 目的 
+
+
+| すべての TCP | すべて | すべての発信トラフィック 
+
+
+| すべての UDP | すべて | すべての発信トラフィック 
+|===
+
+
+==== 高度なアウトバウンドルール
+
+アウトバウンドトラフィックに厳格なルールが必要な場合は、次の情報を使用して、 Cloud Manager によるアウトバウンド通信に必要なポートのみを開くことができます。
+
+
+NOTE: 送信元 IP アドレスは Cloud Manager ホストです。
+
+[cols="5*"]
+|===
+| サービス | プロトコル | ポート | 宛先 | 目的 
+
+
+.9+| Active Directory | TCP | 88 | Active Directory フォレスト | Kerberos V 認証 
+
+
+| TCP | 139 | Active Directory フォレスト | NetBIOS サービスセッション 
+
+
+| TCP | 389 | Active Directory フォレスト | LDAP 
+
+
+| TCP | 445 | Active Directory フォレスト | NetBIOS フレーム同期を使用した Microsoft SMB over TCP 
+
+
+| TCP | 464 | Active Directory フォレスト | Kerberos V パスワードの変更と設定（ SET_CHANGE ） 
+
+
+| TCP | 749 | Active Directory フォレスト | Active Directory Kerberos v の変更とパスワードの設定（ RPCSEC_GSS ） 
+
+
+| UDP | 137 | Active Directory フォレスト | NetBIOS ネームサービス 
+
+
+| UDP | 138 | Active Directory フォレスト | NetBIOS データグラムサービス 
+
+
+| UDP | 464 | Active Directory フォレスト | Kerberos キー管理 
+
+
+| API コールと AutoSupport | HTTPS | 443 | アウトバウンドインターネットおよび ONTAP クラスタ管理 LIF | AWS および ONTAP への API コール、およびネットアップへの AutoSupport メッセージの送信 
+
+
+| API コール | TCP | 3000 | ONTAP クラスタ管理 LIF | ONTAP への API コール 
+
+
+| DNS | UDP | 53 | DNS | Cloud Manager による DNS 解決に使用されます 
+|===
+
+
+== Cloud Volumes ONTAP のルール
+
+Cloud Volumes ONTAP のセキュリティグループには、インバウンドルールとアウトバウンドルールの両方が必要です。
+
+
+
+=== シングルノードシステムのインバウンドルール
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| 優先度 | 名前 | ポート | プロトコル | ソース | 宛先 | アクション | 説明 
+
+
+| 1000 | inbound_ssh | 22 | TCP | 任意 | 任意 | 許可（ Allow ） | クラスタ管理 LIF またはノード管理 LIF の IP アドレスへの SSH アクセス 
+
+
+| 1001 | Inbound_http | 80 | TCP | 任意 | 任意 | 許可（ Allow ） | クラスタ管理 LIF の IP アドレスを使用した System Manager Web コンソールへの HTTP アクセス 
+
+
+| 1002 | INBOUND _111_TCP | 111 | TCP | 任意 | 任意 | 許可（ Allow ） | NFS のリモートプロシージャコール 
+
+
+| 1003 | Inbound_111_UDP | 111 | UDP | 任意 | 任意 | 許可（ Allow ） | NFS のリモートプロシージャコール 
+
+
+| 1004. | Inbound_139 | 139 | TCP | 任意 | 任意 | 許可（ Allow ） | CIFS の NetBIOS サービスセッション 
+
+
+| 1005. | Inbound_161-162_TCP | 161-162 | TCP | 任意 | 任意 | 許可（ Allow ） | 簡易ネットワーク管理プロトコル 
+
+
+| 2006 年 10 月 | Inbound_161-162_UDP | 161-162 | UDP | 任意 | 任意 | 許可（ Allow ） | 簡易ネットワーク管理プロトコル 
+
+
+| 1007. | INBOUND _ 443 | 443 | TCP | 任意 | 任意 | 許可（ Allow ） | クラスタ管理 LIF の IP アドレスを使用した System Manager Web コンソールへの HTTPS アクセス 
+
+
+| 1008 | Inbound_445 | 445 | TCP | 任意 | 任意 | 許可（ Allow ） | NetBIOS フレーム同期を使用した Microsoft SMB over TCP 
+
+
+| 1009. | Inbound_635_tcp の場合 | 635 | TCP | 任意 | 任意 | 許可（ Allow ） | NFS マウント 
+
+
+| 1010 年 | Inbound_635_udp | 635 | TCP | 任意 | 任意 | 許可（ Allow ） | NFS マウント 
+
+
+| 1011 | Inbound_749 | 749 | TCP | 任意 | 任意 | 許可（ Allow ） | Kerberos 
+
+
+| 1012 | INBOUND _2049 _TCP | 2049 | TCP | 任意 | 任意 | 許可（ Allow ） | NFS サーバデーモン 
+
+
+| 1013 | Inbound_2049 _UDP | 2049 | UDP | 任意 | 任意 | 許可（ Allow ） | NFS サーバデーモン 
+
+
+| 1014 | インバウンド _3260 | 3260 | TCP | 任意 | 任意 | 許可（ Allow ） | iSCSI データ LIF を介した iSCSI アクセス 
+
+
+| 1015 | INBOUND _4045-4046_tcp のようになりました | 4045-4046 | TCP | 任意 | 任意 | 許可（ Allow ） | NFS ロックデーモンとネットワークステータスモニタ 
+
+
+| 1016 | INBOUND _4045-4046-UDP です | 4045-4046 | UDP | 任意 | 任意 | 許可（ Allow ） | NFS ロックデーモンとネットワークステータスモニタ 
+
+
+| 1017 | Inbound_10000 | 10000 | TCP | 任意 | 任意 | 許可（ Allow ） | NDMP を使用したバックアップ 
+
+
+| 1018 | INBOUND _11104-11105 | 11104-11105 | TCP | 任意 | 任意 | 許可（ Allow ） | SnapMirror によるデータ転送 
+
+
+| 3000 | INBOUND _DENY_ALL_TCP | 任意 | TCP | 任意 | 任意 | 拒否 | 他のすべての TCP インバウンドトラフィックをブロックします 
+
+
+| 3001 | Inbound_deny_all_udp | 任意 | UDP | 任意 | 任意 | 拒否 | 他のすべての UDP 着信トラフィックをブロックします 
+
+
+| 65000 | AllowVnetInBound のことです | 任意 | 任意 | VirtualNetwork | VirtualNetwork | 許可（ Allow ） | VNet 内からのインバウンドトラフィック 
+
+
+| 65001 | AllowAzureLoad BalancerInBound の略 | 任意 | 任意 | AzureLoadBalancer の略 | 任意 | 許可（ Allow ） | Azure Standard Load Balancer からのデータトラフィック 
+
+
+| 65500 | DenyAllInBound の 2 つの機能があります | 任意 | 任意 | 任意 | 任意 | 拒否 | 他のすべてのインバウンドトラフィックをブロックする 
+|===
+
+
+=== HA システムのインバウンドルール
+
+
+NOTE: HA システムのインバウンドデータトラフィックは Azure Standard Load Balancer を経由するため、シングルノードシステムよりもインバウンドルールが少なくなります。そのため、「 AllowAzureLoadBalancerInBound 」ルールに示されているように、ロードバランサからのトラフィックがオープンである必要があります。
+
+[cols="8,13,8,8,13,13,8,27"]
+|===
+| 優先度 | 名前 | ポート | プロトコル | ソース | 宛先 | アクション | 説明 
+
+
+| 100 | INBOUND _ 443 | 443 | 任意 | 任意 | 任意 | 許可（ Allow ） | クラスタ管理 LIF の IP アドレスを使用した System Manager Web コンソールへの HTTPS アクセス 
+
+
+| 101 | INBOUND _111_TCP | 111 | 任意 | 任意 | 任意 | 許可（ Allow ） | NFS のリモートプロシージャコール 
+
+
+| 102 | INBOUND _2049 _TCP | 2049 | 任意 | 任意 | 任意 | 許可（ Allow ） | NFS サーバデーモン 
+
+
+| 111 | inbound_ssh | 22 | 任意 | 任意 | 任意 | 許可（ Allow ） | クラスタ管理 LIF またはノード管理 LIF の IP アドレスへの SSH アクセス 
+
+
+| 121. | Inbound_53 | 53 | 任意 | 任意 | 任意 | 許可（ Allow ） | DNS と CIFS 
+
+
+| 65000 | AllowVnetInBound のことです | 任意 | 任意 | VirtualNetwork | VirtualNetwork | 許可（ Allow ） | VNet 内からのインバウンドトラフィック 
+
+
+| 65001 | AllowAzureLoad BalancerInBound の略 | 任意 | 任意 | AzureLoadBalancer の略 | 任意 | 許可（ Allow ） | Azure Standard Load Balancer からのデータトラフィック 
+
+
+| 65500 | DenyAllInBound の 2 つの機能があります | 任意 | 任意 | 任意 | 任意 | 拒否 | 他のすべてのインバウンドトラフィックをブロックする 
+|===
+
+
+=== Cloud Volumes ONTAP のアウトバウンドルール
+
+Cloud Volumes 用の事前定義済みセキュリティグループ ONTAP は、すべての発信トラフィックをオープンします。これが可能な場合は、基本的なアウトバウンドルールに従います。より厳格なルールが必要な場合は、高度なアウトバウンドルールを使用します。
+
+
+
+==== 基本的なアウトバウンドルール
+
+Cloud Volumes ONTAP 用の定義済みセキュリティグループには、次のアウトバウンドルールが含まれています。
+
+[cols="20,20,60"]
+|===
+| プロトコル | ポート | 目的 
+
+
+| すべての TCP | すべて | すべての発信トラフィック 
+
+
+| すべての UDP | すべて | すべての発信トラフィック 
+|===
+
+
+==== 高度なアウトバウンドルール
+
+発信トラフィックに厳格なルールが必要な場合は、次の情報を使用して、 Cloud Volumes ONTAP による発信通信に必要なポートのみを開くことができます。
+
+
+NOTE: source は、 Cloud Volumes ONTAP システムのインターフェイス（ IP アドレス）です。
+
+[cols="10,10,10,20,20,40"]
+|===
+| サービス | プロトコル | ポート | ソース | 宛先 | 目的 
+
+
+.18+| Active Directory | TCP | 88 | ノード管理 LIF | Active Directory フォレスト | Kerberos V 認証 
+
+
+| UDP | 137 | ノード管理 LIF | Active Directory フォレスト | NetBIOS ネームサービス 
+
+
+| UDP | 138 | ノード管理 LIF | Active Directory フォレスト | NetBIOS データグラムサービス 
+
+
+| TCP | 139 | ノード管理 LIF | Active Directory フォレスト | NetBIOS サービスセッション 
+
+
+| TCP | 389 | ノード管理 LIF | Active Directory フォレスト | LDAP 
+
+
+| TCP | 445 | ノード管理 LIF | Active Directory フォレスト | NetBIOS フレーム同期を使用した Microsoft SMB over TCP 
+
+
+| TCP | 464 | ノード管理 LIF | Active Directory フォレスト | Kerberos V パスワードの変更と設定（ SET_CHANGE ） 
+
+
+| UDP | 464 | ノード管理 LIF | Active Directory フォレスト | Kerberos キー管理 
+
+
+| TCP | 749 | ノード管理 LIF | Active Directory フォレスト | Kerberos V Change & Set Password （ RPCSEC_GSS ） 
+
+
+| TCP | 88 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | Kerberos V 認証 
+
+
+| UDP | 137 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | NetBIOS ネームサービス 
+
+
+| UDP | 138 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | NetBIOS データグラムサービス 
+
+
+| TCP | 139 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | NetBIOS サービスセッション 
+
+
+| TCP | 389 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | LDAP 
+
+
+| TCP | 445 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | NetBIOS フレーム同期を使用した Microsoft SMB over TCP 
+
+
+| TCP | 464 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | Kerberos V パスワードの変更と設定（ SET_CHANGE ） 
+
+
+| UDP | 464 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | Kerberos キー管理 
+
+
+| TCP | 749 | データ LIF （ NFS 、 CIFS ） | Active Directory フォレスト | Kerberos V Change & Set Password （ RPCSEC_GSS ） 
+
+
+| DHCP | UDP | 68 | ノード管理 LIF | DHCP | 初回セットアップ用の DHCP クライアント 
+
+
+| DHCP | UDP | 67 | ノード管理 LIF | DHCP | DHCP サーバ 
+
+
+| DNS | UDP | 53 | ノード管理 LIF とデータ LIF （ NFS 、 CIFS ） | DNS | DNS 
+
+
+| NDMP | TCP | 18600 ～ 18699 | ノード管理 LIF | 宛先サーバ | NDMP コピー 
+
+
+| SMTP | TCP | 25 | ノード管理 LIF | メールサーバ | SMTP アラート。 AutoSupport に使用できます 
+
+
+.4+| SNMP | TCP | 161 | ノード管理 LIF | サーバを監視します | SNMP トラップによる監視 
+
+
+| UDP | 161 | ノード管理 LIF | サーバを監視します | SNMP トラップによる監視 
+
+
+| TCP | 162 | ノード管理 LIF | サーバを監視します | SNMP トラップによる監視 
+
+
+| UDP | 162 | ノード管理 LIF | サーバを監視します | SNMP トラップによる監視 
+
+
+.2+| SnapMirror | TCP | 11104 | クラスタ間 LIF | ONTAP クラスタ間 LIF | SnapMirror のクラスタ間通信セッションの管理 
+
+
+| TCP | 11105 | クラスタ間 LIF | ONTAP クラスタ間 LIF | SnapMirror によるデータ転送 
+
+
+| syslog | UDP | 514 | ノード管理 LIF | syslog サーバ | syslog 転送メッセージ 
+|===

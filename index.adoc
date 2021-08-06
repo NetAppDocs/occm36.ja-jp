@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: Cloud Manager と Cloud Volumes ONTAP のドキュメントポータルへようこそ。 
+---
+= Cloud Manager および Cloud Volumes ONTAP のドキュメント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+OnCommand Cloud Manager では、 NetApp Cloud Volumes ONTAP を導入して管理できます。 NetApp 解決策は、クラウドベースのワークロードに対して保護、可視化、制御を提供するデータ管理 です。
+
+
+
+== 新機能をご紹介します
+
+* link:reference_new_occm.html["Cloud Manager の新機能"]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Cloud Volumes ONTAP の新機能"^]
+
+
+
+
+== はじめに
+
+* link:task_getting_started_aws.html["AWS を始めましょう"]
+* link:task_getting_started_azure.html["Azure で始めましょう"]
+* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Cloud Volumes ONTAP でサポートされている構成を検索します"^]
+* link:reference_networking_cloud_manager.html["Cloud Manager の詳細なネットワーク要件を確認します"]
+* link:reference_networking_aws.html["Cloud Volumes ONTAP for AWS の詳細なネットワーク要件を確認します"]
+* link:reference_networking_azure.html["Cloud Volumes ONTAP for Azure の詳細なネットワーク要件を確認します"]
+* link:task_planning_your_config.html["Cloud Volumes ONTAP の構成を計画します"]
+
+
+
+
+== API による自動化
+
+* link:api.html["API 開発者ガイド"^]
+* link:reference_infrastructure_as_code.html["自動化のサンプル"]
+
+
+
+
+== 同僚とつながり、サポートを受け、詳細情報を入手します
+
+* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["ネットアップコミュニティ：クラウドデータサービス"^]
+* https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]
+* link:reference_additional_info.html["ヘルプを参照したり、詳細情報を参照したりするには"]
+

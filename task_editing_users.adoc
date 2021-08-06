@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task_editing_users.html 
+keywords: editing, users, user accounts, modify, modifying, report, notification, password, notification report 
+summary: Cloud Manager でユーザアカウントを変更するには、通知レポートを有効または無効にします。 
+---
+= ユーザアカウントの編集
+:hardbreaks:
+:backend-html5-doctype-book: 
+:basebackend-html-doctype-book: 
+:doctype-book: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager でユーザアカウントを変更するには、通知レポートを有効または無効にします。
+
+でパスワードとユーザ情報を変更する必要があります https://cloud.netapp.com["NetApp Cloud Central"^]。
+
+.手順
+. Cloud Manager コンソールの右上にあるユーザアイコンをクリックし、 * View Users * を選択します。
+. 行の最後にあるメニューアイコンを選択し、 * ユーザーの編集 * をクリックします。
++
+image:screenshot_edit_user.gif["スクリーンショット：ユーザアカウントを編集するためのメニューを表示します。メニューはユーザ名の横にあります。"]
+
+. [ ユーザ設定（ User Settings ） ] ページで、ユーザアカウントを変更します。
+
