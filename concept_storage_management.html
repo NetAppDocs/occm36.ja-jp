@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>ストレージ管理</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="ストレージ管理" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/occm36/concept_storage_management.html" />
+	<meta property="og:description" content="Cloud Manager では、 Cloud Volumes ONTAP 用のボリュームをプロビジョニングするために必要な AWS と Azure のストレージを購入することで、ストレージを簡単にプロビジョニングできます。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/occm36/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta http-equiv="nss-product" content="OnCommand"/>
+  
+  <meta name="description" content="Cloud Manager では、 Cloud Volumes ONTAP 用のボリュームをプロビジョニングするために必要な AWS と Azure のストレージを購入することで、ストレージを簡単にプロビジョニングできます。">
+  <meta name="keywords" content=" tenants, provisioning, volume view, working environments, capacity management, storage provisioning, manual, automatic, advanced allocation, aggregates, thin provisioning, free space, mode, tenants, isolate, isolation, cloud manager admin, admin, tenant admin, working environment admin, volume view, paygo, license, upgrade">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ja-jp/occm36/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/occm36/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/occm36/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/occm36/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/occm36/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/occm36/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/occm36/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/occm36/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/occm36/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/occm36/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/occm36/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/occm36/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/occm36/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/occm36/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/occm36/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ja-jp/occm36/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ja-jp/occm36/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ja-jp/occm36/js/na-search.js'></script>
+  
+
+  
+  <script src='/ja-jp/occm36/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ja-jp/occm36/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/occm36/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/occm36/js/na-utility.js'></script>
+  <script src='/ja-jp/occm36/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ja-jp/occm36/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/occm36/js/toc.js'></script>
+  <script src='/ja-jp/occm36/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ja-jp/occm36/js/product-family.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/occm36/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/occm36/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/occm36/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/occm36/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <div class="n-language-selector-menu__header">
+            <span class="n-language-selector-menu__title">言語を選択</span>
+          </div>
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/occm36/concept_storage_management.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/occm36/concept_storage_management.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/occm36/concept_storage_management.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+          <div class="menu__footer">
+            <p>選択中の言語: 日本語
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/occm36/">Cloud&nbsp;Manager&nbsp;3.6</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          ストレージ管理
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">サイト</span>
+    </div>
+    <li>
+      <a target="_blank" href="/ja-jp/occm36/pdfs/fullsite-sidebar/Cloud_Manager_および_Cloud_Volumes_ONTAP_のドキュメント.pdf" >
+        <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+        Cloud Manager および Cloud Volumes ONTAP のドキュメント
+      </a>
+    </li>
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/リリースノート.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            リリースノート
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/クラウドマネージャ.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            クラウドマネージャ
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            概念
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ストレージ.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ストレージ
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">このページ</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/ja-jp/occm36/pdfs/pages/concept_storage_management.pdf" >
+    <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+    ストレージ管理
+  </a>
+</li>
+
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ハイアベイラビリティペア.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ハイアベイラビリティペア
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/はじめに.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            はじめに
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/Cloud_Manager_のセットアップ.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            Cloud Manager のセットアップ
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ネットワーク要件.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ネットワーク要件
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/追加の導入オプション.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            追加の導入オプション
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/Cloud_Volumes_ONTAP_の導入.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            Cloud Volumes ONTAP の導入
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ストレージのプロビジョニング.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ストレージのプロビジョニング
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ボリュームビューから_NFS_ボリュームをプロビジョニングします.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ボリュームビューから NFS ボリュームをプロビジョニングします
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/ハイブリッドクラウド全体でデータを管理する.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            ハイブリッドクラウド全体でデータを管理する
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/Cloud_Volumes_ONTAP_の管理.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            Cloud Volumes ONTAP の管理
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/Cloud_Manager_の管理.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            Cloud Manager の管理
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/API_と自動化.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            API と自動化
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              セクション
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/ja-jp/occm36/pdfs/sidebar/参照.pdf" 
+            
+          >
+            <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>
+            参照
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/index.html">
+        Cloud Manager 3.6 のドキュメント
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> リリースノート</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> クラウドマネージャ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_new_occm.html">
+        新機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_issues.html">
+        既知の問題
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_limitations.html">
+        既知の制限
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-volumes-ontap/">
+        Cloud Volumes ONTAP
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_overview.html">
+        製品の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_cloud_central.html">
+        NetApp Cloud Central
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_accounts_and_permissions.html">
+        アカウントと権限
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ストレージ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_storage.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_data_tiering.html">
+        データの階層化
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_storage_management.html">
+        ストレージ管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_worm.html">
+        WORM ストレージ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ハイアベイラビリティペア</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_ha.html">
+        AWS の HA ペア
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_ha_azure.html">
+        Azure の HA ペア
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_evaluating.html">
+        評価中
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_licensing.html">
+        ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_security.html">
+        セキュリティ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/concept_performance.html">
+        パフォーマンス
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> はじめに</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_deployment_overview.html">
+        導入の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_getting_started_aws.html">
+        AWS の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_getting_started_azure.html">
+        Azure の導入を開始します
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cloud Manager のセットアップ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_adding_cloud_accounts.html">
+        クラウドプロバイダアカウントの追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_adding_nss_accounts.html">
+        ネットアップサポートサイトアカウントの追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_installing_https_cert.html">
+        HTTPS 証明書のインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_setting_up_users_tenants.html">
+        ユーザとテナントを設定する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_setting_up_kms.html">
+        AWS KMS のセットアップ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ネットワーク要件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_networking_cloud_manager.html">
+        クラウドマネージャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_networking_aws.html">
+        Cloud Volumes ONTAP for AWS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_setting_up_transit_gateway.html">
+        AWS 中継ゲートウェイのセットアップ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_networking_azure.html">
+        Cloud Volumes ONTAP for Azure
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 追加の導入オプション</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_cloud_mgr_reqs.html">
+        Cloud Manager ホストの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_installing_linux.html">
+        Linux ホストへの Cloud Manager のインストール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_launching_aws_mktp.html">
+        AWS Marketplace から Cloud Manager を導入する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_launching_azure_mktp.html">
+        Azure Marketplace から Cloud Manager を導入する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_installing_azure_gov.html">
+        クラウドマネージャーを Azure GOV 地域に展開する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_installing_azure_germany.html">
+        クラウドマネージャーを Azure Germany 地域に展開しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/media/c2s.pdf">
+        AWS C2S 環境の導入
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cloud Volumes ONTAP の導入</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_before.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_logging_in.html">
+        Cloud Manager にログインしています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_planning_your_config.html">
+        構成の計画
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_enabling_flash_cache.html">
+        AWS での Cloud Volumes ONTAP での Flash Cache の有効化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_deploying_otc_aws.html">
+        AWS での Cloud Volumes ONTAP の起動
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_deploying_otc_azure.html">
+        Azure で Cloud Volumes ONTAP を起動します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_registering.html">
+        従量課金制システムの登録
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_setting_up_ontap_cloud.html">
+        Cloud Volumes ONTAP のセットアップ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ストレージのプロビジョニング</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_provisioning_storage.html">
+        ボリューム、アグリゲート、 LUN の作成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_tiering.html">
+        使用頻度の低いデータをオブジェクトストレージに階層化します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_connecting_kubernetes.html">
+        永続ストレージとしての Cloud Volumes ONTAP の使用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_encrypting_volumes.html">
+        NetApp ボリューム暗号化によるボリュームの暗号化
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_managing_storage.html">
+        既存のストレージの管理
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ボリュームビューから NFS ボリュームをプロビジョニングします</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_changing_volume_view.html">
+        ボリュームビューに変更しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_provisioning_volume_view.html">
+        NFS ボリュームの作成とマウント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_managing_volume_view.html">
+        NFS ボリュームの管理
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ハイブリッドクラウド全体でデータを管理する</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_discovering_ontap.html">
+        ONTAP クラスタの検出と管理
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_replicating_data.html">
+        クラウドとの間でデータをレプリケートする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_syncing_s3.html">
+        AWS S3 へのデータの同期
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cloud Volumes ONTAP の管理</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_connecting_to_otc.html">
+        Cloud Volumes ONTAP に接続しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_updating_ontap_cloud.html">
+        ソフトウェアの更新
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_modifying_ontap_cloud.html">
+        システム設定の変更
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_managing_state.html">
+        システムの停止と起動
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_monitoring_costs.html">
+        AWS コストの監視
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_protecting_ransomware.html">
+        ランサムウェア保護の向上
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_adding_ontap_cloud.html">
+        既存のシステムの追加
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_deleting_working_env.html">
+        システムの削除
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cloud Manager の管理</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_updating_cloud_manager.html">
+        Cloud Manager を更新しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_backing_up_restoring.html">
+        バックアップとリストア
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_removing.html">
+        作業環境の削除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_editing_users.html">
+        ユーザアカウントの編集
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_configuring_proxy.html">
+        プロキシの設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_renewing_cert.html">
+        HTTPS 証明書を更新しています
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/task_uninstalling.html">
+        Cloud Manager をアンインストールしています
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> API と自動化</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/occm/api.html">
+        API 開発者ガイド
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_infrastructure_as_code.html">
+        自動化のサンプル
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 参照</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_integration_faq.html">
+        Cloud Central の統合に関する FAQ
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html">
+        Cloud Volumes ONTAP でサポートされる構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://cloud.netapp.com/cloud-volumes-global-regions">
+        サポートされている地域
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_security_groups.html">
+        AWS のセキュリティグループルール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_security_groups_azure.html">
+        Azure のセキュリティグループルール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_permissions.html">
+        権限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_default_configs.html">
+        デフォルト設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_user_roles.html">
+        ユーザロール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_additional_info.html">
+        関連リンク
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_earlier_versions.html">
+        以前のバージョン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/occm36/reference_legal_notices.html">
+        法的通知
+      </a></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+<div class="ie-notification">
+  <span class="ie-notification-highlight">これは以前のバージョンの Cloud Manager 用ドキュメントです。</span><br>
+  <span><a href="https://docs.netapp.com/ja-jp/occm/">最新版のドキュメントを参照してください。</a></span>
+</div>
+<div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/occm36/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">ストレージ管理</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-08-06 23:03:47 +0000">08/06/2021</time>
+    
+  
+
+<span>寄稿者
+  <a target="_blank" href="https://github.com/netapp-bcammett">
+    <img  class="avatar avatar-small"
+          alt="netapp-bcammett"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18287750?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+  <span>
+    <a target="_blank" href="/ja-jp/occm36/pdfs/pages/concept_storage_management.pdf" role="button">
+      <img src="/ja-jp/occm36/images/pdf.png" width="20" height="20"/>このページの PDF をダウンロード</a>
+  </span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Cloud Manager は、 Cloud Volumes ONTAP ストレージの簡易化された高度な管理機能を提供します。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/important.svg" alt="重要">
+</td>
+<td class="content">
+すべてのディスクとアグリゲートは、 Cloud Manager から直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ストレージのプロビジョニング">ストレージのプロビジョニング</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager では、ディスクを購入してアグリゲートを管理することで、 Cloud Volumes ONTAP のストレージプロビジョニングが容易になります。ボリュームを作成するだけで済みます。必要に応じて、 Advanced Allocation オプションを使用してアグリゲートをプロビジョニングできます。</p>
+</div>
+<div class="sect2">
+<h3 id="プロビジョニングの簡素化">プロビジョニングの簡素化</h3>
+<div class="paragraph">
+<p>アグリゲートは、ボリュームにクラウドストレージを提供します。Cloud Manager では、インスタンスを起動したとき、および追加ボリュームをプロビジョニングしたときに、アグリゲートが作成されます。</p>
+</div>
+<div class="paragraph">
+<p>ボリュームを作成すると、 Cloud Manager は次の 3 つのいずれかを実行します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>十分な空きスペースがある既存のアグリゲートにボリュームを配置します。</p>
+</li>
+<li>
+<p>ボリュームを既存のアグリゲートに配置するには、そのアグリゲート用に追加のディスクを購入します。</p>
+</li>
+<li>
+<p>新しいアグリゲートのディスクを購入し、そのアグリゲートにボリュームを配置します。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cloud Manager は、アグリゲートの最大サイズ、シンプロビジョニングが有効になっているかどうか、アグリゲートの空きスペースのしきい値など、いくつかの要因を確認して新しいボリュームをどこに配置するかを決定します。</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/tip.svg" alt="ヒント">
+</td>
+<td class="content">
+空きスペースのしきい値は、 Cloud Manager Admin が * Settings * ページで変更できます。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="aws-でのアグリゲートのディスクサイズの選択">AWS でのアグリゲートのディスクサイズの選択</h4>
+<div class="paragraph">
+<p>Cloud Manager は、 AWS で Cloud Volumes ONTAP 用の新しいアグリゲートを作成すると、システム内のアグリゲートの数が増えるにつれて、アグリゲート内のディスクサイズを徐々に増加させます。Cloud Manager は、 AWS で許可される最大データディスク数に達する前に、システムの最大容量を利用できるようにします。</p>
+</div>
+<div class="paragraph">
+<p>たとえば、 Cloud Manager では、 Cloud Volumes ONTAP Premium または BYOL システムのアグリゲートに次のディスクサイズを選択できます。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">アグリゲート番号</th>
+<th class="tableblock halign-left valign-top">ディスクサイズ</th>
+<th class="tableblock halign-left valign-top">最大アグリゲート容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500 MB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 TB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 TB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6TB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2TB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12TB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>ディスクサイズは、 Advanced Allocation オプションを使用して選択できます。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="高度な割り当て">高度な割り当て</h3>
+<div class="paragraph">
+<p>Cloud Manager でアグリゲートを管理するのではなく、自分で管理できます。 <a href="task_provisioning_storage.html#creating-aggregates">"Advanced allocation * ページからアクセスします"</a>では、特定の数のディスクを含む新しいアグリゲートの作成、既存のアグリゲートへのディスクの追加、および特定のアグリゲートでのボリュームの作成を行うことができます。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="容量管理">容量管理</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager 管理者は、 Cloud Manager がストレージ容量の決定を通知するか、または Cloud Manager が容量要件を自動的に管理するかを選択できます。これらのモードの仕組みを理解するのに役立つ場合があります。</p>
+</div>
+<div class="sect2">
+<h3 id="自動容量管理">自動容量管理</h3>
+<div class="paragraph">
+<p>Cloud Manager 管理者が容量管理モードを自動に設定した場合、 Cloud Manager は、追加の容量が必要になったときに Cloud Volumes ONTAP インスタンス用の新しいディスクを自動的に購入します。また、未使用のディスクセット（アグリゲート）の削除、必要に応じてアグリゲート間でのボリュームの移動、ディスクの障害状態の解除を試みます。</p>
+</div>
+<div class="paragraph">
+<p>次の例は、このモードの動作を示しています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>EBS ディスクが 5 台以下のアグリゲートが容量のしきい値に達すると、 Cloud Manager はそのアグリゲートの新しいディスクを自動的に購入し、ボリュームを継続して拡張できるようにします。</p>
+</li>
+<li>
+<p>12 個の Azure ディスクを持つアグリゲートが容量のしきい値に達すると、 Cloud Manager は、ボリュームをそのアグリゲートから使用可能な容量を持つアグリゲートまたは新しいアグリゲートに自動的に移動します。</p>
+<div class="paragraph">
+<p>ボリュームに新しいアグリゲートを作成すると、 Cloud Manager はそのボリュームのサイズに対応するディスクサイズを選択します。</p>
+</div>
+<div class="paragraph">
+<p>元のアグリゲートに空きスペースがあることに注意してください。既存のボリュームまたは新しいボリュームでは、そのスペースを使用できます。このシナリオでは、スペースを AWS または Azure に戻すことはできません。</p>
+</div>
+</li>
+<li>
+<p>アグリゲートに 12 時間を超えるボリュームが含まれていない場合は、 Cloud Manager によって削除されます。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="手動による容量管理">手動による容量管理</h3>
+<div class="paragraph">
+<p>Cloud Manager の管理者が容量管理モードを手動に設定した場合、容量の決定が必要なときに、 Cloud Manager に「 Action Required 」メッセージが表示されます。自動モードで説明されている例と同じ例が手動モードにも適用されますが、アクションを受け入れる必要があります。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="テナントを使用したストレージの分離">テナントを使用したストレージの分離</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager では、テナントと呼ばれる分離されたグループにストレージをプロビジョニングし、管理できます。クラウドマネージャーユーザーとその作業環境をテナント全体でどのように整理するかを決定する必要があります。</p>
+</div>
+<div class="sect2">
+<h3 id="作業環境">作業環境</h3>
+<div class="paragraph">
+<p>Cloud Manager はストレージシステムを _ 作業環境 _ として表します。作業環境は次のいずれかです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>単一のクラウドボリューム ONTAP システムまたは HA ペア</p>
+</li>
+<li>
+<p>ネットワーク内のオンプレミス ONTAP クラスタ</p>
+</li>
+<li>
+<p>NetApp プライベートストレージ構成の ONTAP クラスタ</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>次の図は、 Cloud Volumes ONTAP の動作環境を示しています。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_working_env.gif" alt="スクリーンショット： Cloud Volumes ONTAP の作業環境を示しています。 Cloud Volumes ONTAP ストレージが表示されています。"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="テナント">テナント</h3>
+<div class="paragraph">
+<p>a_tenant_ は、作業環境をグループに分離します。テナント内に 1 つ以上の作業環境を作成します。次の図は、 Cloud Manager で定義された 3 つのテナントを示しています。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tenants.gif" alt="スクリーンショット： 3 つの定義済みテナントを表示するテナントページ。"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="テナントと作業環境のユーザ管理">テナントと作業環境のユーザ管理</h3>
+<div class="paragraph">
+<p>Cloud Manager ユーザが管理できるテナントと作業環境は、ユーザの役割と割り当てによって異なります。3 つの異なるユーザロールは次のとおりです。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Cloud Manager 管理者</dt>
+<dd>
+<p>製品を管理し、すべてのテナントと作業環境にアクセスできます。</p>
+</dd>
+<dt class="hdlist1">テナント管理者</dt>
+<dd>
+<p>1 つのテナントを管理します。テナント内のすべての作業環境とユーザを作成および管理できます。</p>
+</dd>
+<dt class="hdlist1">作業環境管理者</dt>
+<dd>
+<p>テナント内の 1 つ以上の作業環境を作成して管理できます。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="テナントとユーザを作成する方法の例">テナントとユーザを作成する方法の例</h3>
+<div class="paragraph">
+<p>組織に独立して運用する部門がある場合は、各部門にテナントを配置することをお勧めします。</p>
+</div>
+<div class="paragraph">
+<p>たとえば、 3 つの部門に 3 つのテナントを作成できます。次に、テナントごとにテナント管理者を作成します。各テナント内には、作業環境を管理する 1 人以上の作業環境管理者がいます。次の図は、このシナリオを示しています。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_users_and_tenants.png" alt="この図は、 Cloud Manager Admin 、 Tenant Admin 、 Working Environment Admin の関係を示しています。 3 つのテナントをそれぞれの Tenant Admin が管理し、それらに含まれる作業環境をそれぞれの Working Environment Admin が管理しています。"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ボリュームビューを使用してストレージ管理を簡易化">ボリュームビューを使用してストレージ管理を簡易化</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager には、 <em>Volume View</em> という別の管理ビューが用意されており、 AWS でのストレージ管理がさらに簡易化されます。</p>
+</div>
+<div class="paragraph">
+<p>ボリュームビューを使用すると、 AWS で必要な NFS ボリュームを指定するだけで、 Cloud Manager が残りのボリュームを処理できます。必要に応じて Cloud Volumes ONTAP システムを導入し、ボリュームの拡張に応じて容量割り当てを決定します。このビューでは、ストレージ管理をほとんど行わずに、クラウド内のエンタープライズクラスのストレージのメリットを得ることができます。</p>
+</div>
+<div class="paragraph">
+<p>次の図は、ボリュームビューで Cloud Manager を操作する方法を示しています。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_volume_view_overview.png" alt="これは、ボリュームビューの動作の概念図です。4 つの吹き出しがあります。数値 1 はボリュームを指します。クラウドボリューム ONTAP ストレージシステムと基盤となる EBS ストレージを 2 つのポイントで示しています。ホストで使用可能なボリュームを 3 つのポイントで示します。Cloud Volumes ONTAP システムと基盤となるストレージを 4 つのポイントで示しています。"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>NFS ボリュームを作成します。</p>
+</li>
+<li>
+<p>Cloud Manager は、新しいボリューム用に AWS 内の Cloud Volumes ONTAP インスタンスを起動するか、既存のインスタンスにボリュームを作成します。また、ボリューム用の物理 EBS ストレージも購入します。</p>
+</li>
+<li>
+<p>ボリュームをホストとアプリケーションで使用できるようにします。</p>
+</li>
+<li>
+<p>Cloud Manager では、ボリュームの拡張に応じて容量の割り当てを決定します。</p>
+<div class="paragraph">
+<p>つまり、ボリューム（左側のイメージ）とのやり取りだけでなく、 Cloud Manager はストレージシステムとその基盤となるストレージ（右側のイメージ）とのやり取りを行う必要があります。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="初期ボリュームのクラウドリソースの割り当て">初期ボリュームのクラウドリソースの割り当て</h3>
+<div class="paragraph">
+<p>最初のボリュームを作成すると、 Cloud Manager は Cloud Volumes ONTAP インスタンスまたは Cloud Volumes ONTAP HA ペアを AWS で起動し、ボリューム用の Amazon EBS ストレージを購入します。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_volume_view_resources.png" alt="この概念図は、 Cloud Manager が初期ボリューム用に作成する AWS リソースを示しています。インスタンスタイプが M4.xLarge または M4.2xLarge で、 1 ～ 4 テラバイトの EBS 暗号化ディスクを持つ Cloud Volumes ONTAP インスタンスです。"></span></p>
+</div>
+<div class="paragraph">
+<p>初期ボリュームのサイズによって、 EC2 インスタンスのタイプと EBS ディスクの数が決まります。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/note.svg" alt="注記">
+</td>
+<td class="content">
+Cloud Manager は、初期ボリュームサイズに応じて、 Cloud Volumes ONTAP Explore または Standard インスタンスを起動します。ボリュームが拡張すると、 Cloud Manager から AWS インスタンスの変更を求められることがあります。つまり、インスタンスのライセンスを Standard または Premium にアップグレードする必要があります。アップグレードすると、 EBS の未フォーマット容量の制限が増加し、ボリュームの拡張が可能になります。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/occm36/images/note.svg" alt="注記">
+</td>
+<td class="content">
+Cloud Manager は、ボリュームビューで Cloud Volumes ONTAP BYOL インスタンスを起動しません。Cloud Volumes ONTAP ライセンスを購入した場合は、 Storage System View で Cloud Manager を使用する必要があります。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="追加ボリューム用のクラウドリソースの割り当て">追加ボリューム用のクラウドリソースの割り当て</h3>
+<div class="paragraph">
+<p>ボリュームを追加作成すると、 Cloud Manager は既存の Cloud Volumes ONTAP インスタンスまたは新しい Cloud Volumes ONTAP インスタンスにボリュームを作成します。インスタンスの AWS の場所とディスクタイプが要求されたボリュームと一致し、十分なスペースがある場合、 Cloud Manager は既存のインスタンスにボリュームを作成できます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ネットアップの-storage-efficiency-機能とストレージコスト">ネットアップの Storage Efficiency 機能とストレージコスト</h3>
+<div class="paragraph">
+<p>Cloud Manager は、すべてのボリュームで NetApp Storage Efficiency 機能を自動的に有効にします。このような効率化により、必要なストレージの合計容量を削減できます。割り当てられた容量と購入した AWS の容量が異なるため、ストレージのコストを削減できます。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-manager-が自動的に処理する容量割り当ての決定">Cloud Manager が自動的に処理する容量割り当ての決定</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Manager は、容量のしきい値を超過した場合に追加の EBS ディスクを購入します。これは、ボリュームの拡張に伴って発生します。</p>
+</li>
+<li>
+<p>ディスクに 12 時間のボリュームが含まれていない場合、 Cloud Manager は使用されていない EBS ディスクのセットを削除します。</p>
+</li>
+<li>
+<p>Cloud Manager は、容量の問題を回避するために、ディスクセット間でボリュームを移動します。</p>
+<div class="paragraph">
+<p>場合によっては、追加の EBS ディスクを購入する必要があります。また、元のディスクセットのスペースを新しいボリュームと既存のボリュームに解放します。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">寄稿する</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/occm36/blob/main/concept_storage_management.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/occm36/images/github.png" class="github-icon" />このページを編集する</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/occm36/issues/new?body=Page%3A%20[ストレージ管理](https://docs.netapp.com/ja-jp/occm36/concept_storage_management.html)" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/occm36/images/github.png" class="github-icon" />ドキュメントの変更をリクエストする</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >貢献する方法を学ぶ</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/occm36/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Web サイトについてのフィードバックを<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">お寄せください</a>
+  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">お知らせ</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/occm36/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/occm36/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/occm36/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/occm36/js/www-ntap.js'></script>
+    <script src='/ja-jp/occm36/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
