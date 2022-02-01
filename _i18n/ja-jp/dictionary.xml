@@ -1407,7 +1407,6 @@
   <block id="27bf96ea2dd4c98f397498424680c167" category="list-text">作業環境の名前を入力し、 * 削除 * をクリックします。</block>
   <block id="7d73be13421466d5cf5d832329f74c79" category="paragraph">作業環境を削除するには、最大 5 分かかります。</block>
   <block id="2312fc1b07dc845a6993585c826d6ace" category="summary">OnCommand Cloud Manager では通常、新しい機能、拡張機能、およびバグ修正を提供するために、毎月新しいリリースが導入されます。</block>
-  <block id="05446b298be754e58d1dca73d1254981" category="doc">Cloud Manager 3.6 の新機能</block>
   <block id="d82f7659524336d21b67ae8a490bd7a1" category="inline-link-macro">3.5 の新機能</block>
   <block id="e77df3191fc04494911ab761c6b0465b" category="inline-link-macro">3.4 の新機能</block>
   <block id="caeba3773c55f98d887e37808293db8d" category="admonition">以前のリリースをお探しですか？<block ref="1e25133c32e530307c1590f8a1ba034b" category="inline-link-macro-rx"></block>
@@ -3194,4 +3193,5 @@
   <block id="75396e001838965f1f26327de3cf6d73" category="sidebar">Cloud Volumes ONTAP でサポートされる構成</block>
   <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="sidebar">権限</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">以前のバージョン</block>
+  <block id="acc81ea7928b1749431e8b47599e424c" category="doc">Cloud Manager 3.6 の新機能</block>
 </blocks>
