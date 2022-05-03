@@ -6,6 +6,7 @@ summary: Cloud Manager では、 Cloud Manager に Cloud Central ユーザを追
 ---
 = ユーザとテナントを設定する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

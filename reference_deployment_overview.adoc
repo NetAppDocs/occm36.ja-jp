@@ -7,6 +7,7 @@ summary: 導入を開始する前に、 OnCommand Cloud Manager と Cloud Volume
 = 導入の概要
 :toc: macro
 :hardbreaks:
+:allow-uri-read: 
 :toc: 
 :nofooter: 
 :icons: font
@@ -75,7 +76,7 @@ Cloud Manager のインストール後に、クラウドプロバイダアカウ
 
 Cloud Manager を起動して実行すると、 AWS および Microsoft Azure で Cloud Volumes ONTAP の導入を開始できます。
 
-link:task_getting_started_aws.html["AWS の概要"] および  Cloud Volumes ONTAP を短時間で起動して実行するための手順を説明します。その他のヘルプについては、次を参照してください。
+link:task_getting_started_aws.html["AWS の概要"] および link:task_getting_started_azure.html["Azure の導入を開始します"] Cloud Volumes ONTAP を短時間で起動して実行するための手順を説明します。その他のヘルプについては、次を参照してください。
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Cloud Volumes ONTAP 9.5 でサポートされる構成"^]
 * link:task_planning_your_config.html["構成の計画"]

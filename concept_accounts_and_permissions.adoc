@@ -6,6 +6,7 @@ summary: Cloud Manager では、 Cloud Volumes ONTAP システムを導入する
 ---
 = クラウドプロバイダのアカウントと権限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -91,7 +92,7 @@ image:screenshot_accounts_switch_azure.gif["[ 詳細と資格情報 ] ページ�
 
 .市場への導入とオンプレミスの導入についてはどうでしょうか。
 ****
-上記のセクションでは、 NetApp Cloud Central で推奨される導入方法について説明します。から Cloud Manager を導入することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 を使用できます 。
+上記のセクションでは、 NetApp Cloud Central で推奨される導入方法について説明します。から Cloud Manager を導入することもできます link:task_launching_aws_mktp.html["AWS Marketplace"]、 link:task_launching_azure_mktp.html["Azure Marketplace で入手できます"]を使用できます link:task_installing_linux.html["Cloud Manager をオンプレミスにインストール"]。
 
 どちらかのマーケットプレイスを使用する場合、アクセス権は同じ方法で提供されます。必要なのは、手動で IAM ロールまたは Cloud Manager の管理対象 ID を作成して設定し、追加のアカウントに権限を付与することだけです。
 

@@ -6,6 +6,7 @@ summary: Cloud Manager では、データベースのバックアップとリス
 ---
 = Cloud Manager のバックアップとリストア
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

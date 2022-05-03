@@ -6,6 +6,7 @@ summary: 各 Cloud Manager ユーザアカウントには、権限を定義す�
 ---
 = ユーザロール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

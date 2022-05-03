@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP でのクラウドストレージの使用方法を
 ---
 = Cloud Volumes ONTAP でのクラウドストレージの使用方法
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -59,7 +60,7 @@ https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.ht
 
 Azure では、アグリゲートに同じサイズのディスクを 12 本まで含めることができます。ディスクタイプと最大ディスクサイズは、シングルノードシステムと HA ペアのどちらを使用するかによって異なります。
 
-シングルノードシステム::
+シングルノードシステム:: シングルノードシステムでは、次の 3 種類の Azure Managed Disks を使用できます。
 +
 --
 * _Premium SSD Managed Disks （プレミアム SSD 管理ディスク） - I/O 負荷の高いワークロードに高パフォーマンスを提供し、コストを高めます。

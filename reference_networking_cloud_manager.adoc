@@ -6,6 +6,7 @@ summary: Cloud Manager で Cloud Volumes ONTAP システムを AWS または Mic
 ---
 = Cloud Manager のネットワーク要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -34,7 +35,7 @@ Cloud Manager で Cloud Volumes ONTAP を導入および管理するには、ア
 
 次のセクションでは、特定のエンドポイントについて説明します。
 
-AWS で Cloud Volumes ONTAP を管理するためのアウトバウンドインターネットアクセス::
+AWS で Cloud Volumes ONTAP を管理するためのアウトバウンドインターネットアクセス:: Cloud Manager で Cloud Volumes ONTAP を AWS に導入して管理する場合、次のエンドポイントに接続するには、アウトバウンドインターネットアクセスが必要です。
 +
 --
 [cols="43,57"]
@@ -95,7 +96,7 @@ AWS サービス（ amazonaws.com ）：
 | アップグレード時に、 Cloud Manager はサードパーティの依存関係に対応する最新のパッケージをダウンロードします。 
 |===
 --
-Cloud Volumes ONTAP を Azure で管理するためのアウトバウンドインターネットアクセス::
+Cloud Volumes ONTAP を Azure で管理するためのアウトバウンドインターネットアクセス:: Microsoft Azure で Cloud Volumes ONTAP を導入および管理する場合、 Cloud Manager では、次のエンドポイントに接続するためにアウトバウンドインターネットアクセスが必要です。
 +
 --
 [cols="43,57"]
@@ -148,7 +149,7 @@ Cloud Volumes ONTAP を Azure で管理するためのアウトバウンドイ�
 | アップグレード時に、 Cloud Manager はサードパーティの依存関係に対応する最新のパッケージをダウンロードします。 
 |===
 --
-Web ブラウザからのアウトバウンドインターネットアクセス::
+Web ブラウザからのアウトバウンドインターネットアクセス:: ユーザは Web ブラウザから Cloud Manager にアクセスする必要があります。Web ブラウザを実行するマシンは、次のエンドポイントに接続する必要があります。
 +
 --
 [cols="43,57"]
@@ -175,7 +176,7 @@ Cloud Manager コンソールをロードするには、 Web ブラウザでホ�
 | \ https://widget.intercom.io | 製品内でのチャットにより、ネットアップのクラウドエキスパートと会話できます。 
 |===
 --
-Linux ホストに Cloud Manager をインストールするためのアウトバウンドインターネットアクセス::
+Linux ホストに Cloud Manager をインストールするためのアウトバウンドインターネットアクセス:: Cloud Manager インストーラは、インストールプロセス中に次の URL にアクセスする必要があります。
 +
 --
 * http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm

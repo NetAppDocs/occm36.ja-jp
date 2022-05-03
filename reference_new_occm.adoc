@@ -6,6 +6,7 @@ summary: OnCommand Cloud Manager では通常、新しい機能、拡張機能�
 ---
 = Cloud Manager 3.6 の新機能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -17,7 +18,7 @@ OnCommand Cloud Manager では通常、新しい機能、拡張機能、およ�
 
 
 TIP: 以前のリリースをお探しですか？link:https://docs.netapp.com/us-en/occm35/reference_new_occm.html["3.5 の新機能"^]
-
+link:https://docs.netapp.com/us-en/occm34/reference_new_occm.html["3.4 の新機能"^]
 
 
 
@@ -298,7 +299,7 @@ AWS でデータの階層化を有効にすると、 Cloud Volumes ONTAP は、�
 
 以前のリリースと同様に、 [ 標準 - 低頻度アクセス ] 層と [ 単一ゾーン - 低頻度アクセス ] 層も使用できます。
 
-link:concept_data_tiering.html["データ階層化の詳細については、こちらをご覧ください。"] および 。
+link:concept_data_tiering.html["データ階層化の詳細については、こちらをご覧ください。"] および link:task_tiering.html#changing-the-tiering-level["ストレージクラスを変更する方法について説明します"]。
 
 
 

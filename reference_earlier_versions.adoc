@@ -6,6 +6,7 @@ summary: Cloud Manager の以前のリリースのドキュメントは、最新
 ---
 = それよりも前のバージョンの Cloud Manager のドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: DevOps チームは、さまざまなツールを使用して新しい�
 ---
 = コードとしてのインフラの自動化サンプル
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

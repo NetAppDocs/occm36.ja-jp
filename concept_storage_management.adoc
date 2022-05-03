@@ -6,6 +6,7 @@ summary: Cloud Manager では、 Cloud Volumes ONTAP 用のボリュームをプ
 ---
 = ストレージ管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

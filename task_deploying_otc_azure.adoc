@@ -6,6 +6,7 @@ summary: Cloud Manager で Cloud Volumes ONTAP の作業環境を作成するこ
 ---
 = Azure で Cloud Volumes ONTAP を起動します
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -158,7 +159,7 @@ image:screenshot_cot_vol.gif["スクリーンショット： Cloud Volumes ONTAP
 NOTE: ストレージ階層化はシングルノードシステムでのみサポートされます。
 
 +
-詳細については、を参照してください link:task_planning_your_config.html#choosing-a-volume-usage-profile["ボリューム使用率プロファイルについて"] および 。
+詳細については、を参照してください link:task_planning_your_config.html#choosing-a-volume-usage-profile["ボリューム使用率プロファイルについて"] および link:concept_data_tiering.html["データ階層化の概要"]。
 
 . [Review & Approve] ページで、選択内容を確認して確認します。
 +

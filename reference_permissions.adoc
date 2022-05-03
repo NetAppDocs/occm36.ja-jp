@@ -6,6 +6,7 @@ summary: Cloud Manager には、 AWS と Azure で自分の代わりにアクシ
 ---
 = Cloud Manager 用の AWS および Azure の権限が必要です
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

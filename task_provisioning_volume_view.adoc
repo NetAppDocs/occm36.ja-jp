@@ -6,6 +6,7 @@ summary: Cloud Manager を使用して、 AWS ストレージ上にエンター�
 ---
 = NFS ボリュームの作成とマウント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

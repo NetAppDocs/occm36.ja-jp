@@ -6,6 +6,7 @@ summary: Cloud Manager のボリュームビューに切り替えることがで
 ---
 = ボリュームビューに変更しています
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

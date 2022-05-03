@@ -6,6 +6,7 @@ summary: NFS ボリュームは、クローニング、データアクセスの�
 ---
 = NFS ボリュームの管理
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

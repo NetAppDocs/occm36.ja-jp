@@ -6,6 +6,7 @@ summary: OnCommand Cloud Manager では、クラウドストレージにエン�
 ---
 = Cloud Manager と Cloud Volumes ONTAP の概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

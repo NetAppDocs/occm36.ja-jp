@@ -6,6 +6,7 @@ summary: 運用環境を NetApp Cloud Sync と統合することで、 ONTAP ボ
 ---
 = AWS S3 へのデータの同期
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Cloud Manager でユーザアカウントを変更するには、通知
 ---
 = ユーザアカウントの編集
 :hardbreaks:
+:allow-uri-read: 
 :backend-html5-doctype-book: 
 :basebackend-html-doctype-book: 
 :doctype-book: 

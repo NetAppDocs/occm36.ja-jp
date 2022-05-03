@@ -6,6 +6,7 @@ summary: Cloud Manager を導入する最も一般的な方法は、 Cloud Centr
 ---
 = 既存の Linux ホストに Cloud Manager をインストールする
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

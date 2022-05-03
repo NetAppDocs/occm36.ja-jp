@@ -6,6 +6,7 @@ summary: 一部の EC2 インスタンスタイプには、 Cloud Volumes ONTAP 
 ---
 = AWS での Cloud Volumes ONTAP での Flash Cache の有効化
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

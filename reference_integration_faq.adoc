@@ -6,6 +6,7 @@ summary: Cloud Manager 3.5 にアップグレードする場合、ネットア�
 ---
 = よくある質問： Cloud Manager と NetApp Cloud Central の統合
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
