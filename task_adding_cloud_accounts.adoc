@@ -24,8 +24,8 @@ Cloud Central から Cloud Manager を導入すると、 Cloud Manager は自動
 
 Cloud Volumes ONTAP を別々の AWS アカウントに導入する場合は、これらのアカウントに必要な権限を指定してから、 Cloud Manager に詳細を追加する必要があります。権限の指定方法は、 Cloud Manager に AWS キーを提供するか、信頼されたアカウントのロールの ARN を提供するかによって異なります。
 
-* <<Granting permissions when providing AWS keys>>
-* <<Granting permissions by assuming IAM roles in other accounts>>
+*  permissions when providing AWS keys
+*  permissions by assuming IAM roles in other accounts
 
 
 
@@ -48,7 +48,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 
-これで、アカウントに必要な権限が付与されました。 <<Adding AWS accounts to Cloud Manager,これで、 Cloud Manager に追加できます>>。
+これで、アカウントに必要な権限が付与されました。  AWS accounts to Cloud Manager,これで、 Cloud Manager に追加できます。
 
 
 
@@ -92,7 +92,7 @@ image:screenshot_iam_create_role.gif["AWS IAM コンソールの Create role ペ
 
 
 
-これで、アカウントに必要な権限が付与されました。 <<Adding AWS accounts to Cloud Manager,これで、 Cloud Manager に追加できます>>。
+これで、アカウントに必要な権限が付与されました。  AWS accounts to Cloud Manager,これで、 Cloud Manager に追加できます。
 
 
 
@@ -117,8 +117,8 @@ image:screenshot_accounts_switch_aws.gif["[ 詳細と資格情報 ] ページで
 
 Cloud Volumes ONTAP を別々の Azure アカウントに導入する場合は、それらのアカウントに必要な権限を指定し、アカウントに関する詳細を Cloud Manager に追加する必要があります。
 
-* <<Granting Azure permissions using a service principal>>
-* <<Adding Azure accounts to Cloud Manager>>
+*  Azure permissions using a service principal
+*  Azure accounts to Cloud Manager
 
 
 
@@ -135,9 +135,9 @@ image:diagram_azure_authentication.png["API コールを発信する前に Azure
 NOTE: 次の手順では、新しい Azure ポータルを使用します。問題が発生した場合は、 Azure クラシックポータルを使用してください。
 
 .手順
-. <<Creating a custom role with the required Cloud Manager permissions,必要な Cloud Manager 権限を持つカスタムロールを作成します。>>。
-. <<Creating an Active Directory service principal,Active Directory サービスプリンシパルを作成します。>>。
-. <<Assigning the Cloud Manager Operator role to the service principal,サービスプリンシパルにカスタムクラウドマネージャオペレータロールを割り当てます。>>。
+.  a custom role with the required Cloud Manager permissions,必要な Cloud Manager 権限を持つカスタムロールを作成します。。
+.  an Active Directory service principal,Active Directory サービスプリンシパルを作成します。。
+.  the Cloud Manager Operator role to the service principal,サービスプリンシパルにカスタムクラウドマネージャオペレータロールを割り当てます。。
 
 
 
