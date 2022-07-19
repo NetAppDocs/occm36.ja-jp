@@ -22,4 +22,4 @@ Cloud Manager と NetApp Cloud Central を統合すると、導入環境の簡�
 
 次のビデオでは、 NetApp Cloud Central の概要について説明します。
 
-video::xKRsIfiy-54[youtube, width=848,height=480]
+video::xKRsIfiy-54[youtube,width=848,height=480]
