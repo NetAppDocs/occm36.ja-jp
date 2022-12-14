@@ -94,6 +94,7 @@ ipaddress _ には、 Cloud Manager ホストの設定に応じて、ローカ�
 . ログインしたら、この Cloud Manager システムの名前を入力します。
 
 
+.完了後
 Cloud Manager で Cloud Volumes ONTAP を導入できるように、 AWS アカウントと Azure アカウントの権限を設定します。
 
 * AWS に Cloud Volumes ONTAP を導入する場合は、 link:task_adding_cloud_accounts.html["AWS アカウントをセットアップして、に追加します Cloud Manager の略"]。

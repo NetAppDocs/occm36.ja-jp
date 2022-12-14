@@ -27,6 +27,7 @@ image:workflow_storage_provisioning.png["この図は、 Cloud Volumes ONTAP 用
 
 Cloud Volumes ONTAP システムの起動後にストレージを追加する必要がある場合は、 Cloud Manager から新しい NFS ボリュームと CIFS ボリュームをプロビジョニングできます。
 
+.作業を開始する前に
 AWS で CIFS を使用する場合は、 DNS と Active Directory を設定しておく必要があります。詳細については、を参照してください link:reference_networking_aws.html["Cloud Volumes ONTAP for AWS のネットワーク要件"]。
 
 .手順
@@ -110,8 +111,10 @@ AWS で CIFS を使用する場合は、 DNS と Active Directory を設定し�
 . [Go*] をクリックします。
 
 
+.結果
 Cloud Volumes ONTAP がボリュームをプロビジョニングします。
 
+.完了後
 CIFS 共有をプロビジョニングした場合は、ファイルとフォルダに対する権限をユーザまたはグループに付与し、それらのユーザが共有にアクセスしてファイルを作成できることを確認します。
 
 ボリュームにクォータを適用する場合は、 System Manager または CLI を使用する必要があります。クォータを使用すると、ユーザ、グループ、または qtree が使用するディスク・スペースとファイル数を制限または追跡できます。
@@ -131,6 +134,7 @@ CIFS 共有をプロビジョニングした場合は、ファイルとフォル
 . 新しいボリュームの詳細を入力し、 * Create * をクリックします。
 
 
+.完了後
 必要に応じて、このアグリゲートに追加のボリュームを作成できます。
 
 
@@ -164,6 +168,7 @@ iSCSI LUN を作成する場合は、 System Manager から作成する必要が
 * System Manager でボリュームを作成する前に、十分なスペースを持つアグリゲートがあることを確認する必要があります。Cloud Manager でアグリゲートを作成する必要があります。詳細については、を参照してください link:task_provisioning_storage.html#creating-aggregates["アグリゲートの作成"]。
 
 
+.このタスクについて
 ここでは、 System Manager for Version 9.3 以降の使用方法について説明します。
 
 .手順

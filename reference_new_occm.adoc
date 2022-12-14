@@ -32,11 +32,11 @@ link:media/c2s.pdf["AWS Commercial クラウドサービス環境向けクイッ
 
 == Cloud Manager 3.6.6 （ 2019 年 5 月 1 日）
 
-*  for 6 TB disks in AWS
-*  for new disk sizes with single node systems in Azure
-*  for Standard SSDs with single node systems in Azure
-*  discovery of Kubernetes clusters created with the NetApp Kubernetes Service
-*  to configure an NTP server
+* <<AWS で 6TB のディスクをサポート>>
+* <<Azure のシングルノードシステムで新しいディスクサイズをサポートします>>
+* <<Azure では、シングルノードシステムの Standard SSD がサポートされます>>
+* <<NetApp Kubernetes Service で作成された Kubernetes クラスタの自動検出>>
+* <<NTP サーバを設定する機能>>
 
 
 
@@ -104,12 +104,12 @@ image:screenshot_configure_cifs.gif["NTP Server フィールドを含む CIFS Se
 
 Cloud Manager 3.6.5 では、次の機能が拡張されています。
 
-*  enhancements
-*  Support Site accounts are now managed at the system level
-*  transit gateways can enable access to floating IP addresses
-*  resource groups are now locked
-*  4 and NFS 4.1 are now enabled by default
-*  new API enables you to delete ONTAP Snapshot copies
+* <<Kubernetes の機能拡張>>
+* <<ネットアップサポートサイトのアカウントがシステムレベルで管理されるようになりました>>
+* <<AWS 転送ゲートウェイを使用すると、フローティング IP アドレスへのアクセスを有効にできます>>
+* <<Azure リソースグループがロックされました>>
+* <<NFS 4 および NFS 4.1 がデフォルトで有効になりました>>
+* <<新しい API を使用して、 ONTAP Snapshot コピーを削除できます>>
 
 
 
@@ -208,9 +208,9 @@ Cloud Volumes ONTAP の 9.5 P1 パッチリリースをサポートするよう�
 
 Cloud Manager 3.6.4 には、次の機能拡張が含まれています。
 
-*  encryption with a key from another account
-*  of failed disks
-*  storage accounts enabled for HTTPS when data tiering to Blob containers
+* <<AWS が管理する暗号化で、別のアカウントのキーを使用>>
+* <<障害が発生したディスクのリカバリ>>
+* <<BLOB コンテナへのデータ階層化の際に HTTPS が有効になっている Azure ストレージアカウント>>
 
 
 
@@ -248,13 +248,13 @@ TIP: 通知レポートを有効にするには、ユーザアカウントを編
 
 Cloud Manager 3.6.3 では、次の機能が強化されています。
 
-*  for Cloud Volumes ONTAP 9.5 GA
-*  TB capacity limit for all Premium and BYOL configurations
-*  for new AWS regions
-*  for S3 Intelligent-Tiering
-*  to disable data tiering on the initial aggregate
-*  EC2 instance type now t3.medium for Cloud Manager
-*  of scheduled shutdowns during data transfers
+* <<Cloud Volumes ONTAP 9.5 GA のサポート>>
+* <<すべての Premium 構成および BYOL 構成の容量制限は 368 TB です>>
+* <<新しい AWS リージョンがサポートされます>>
+* <<S3 Intelligent Tiering がサポートされています>>
+* <<最初のアグリゲートでデータ階層化を無効にする機能>>
+* <<Cloud Manager に推奨される EC2 インスタンスタイプは t3.medium です>>
+* <<データ転送中の定期的なシャットダウンの延期>>
 
 
 
@@ -329,10 +329,10 @@ Cloud Volumes ONTAP システムの自動シャットダウンをスケジュー
 
 Cloud Manager 3.6.2 には、新機能と拡張機能が含まれています。
 
-*  spread placement group for Cloud Volumes ONTAP HA in a single AZ
-*  protection
-*  data replication policies
-*  access control for Kubernetes
+* <<AWS は、 Cloud Volumes ONTAP HA 用の配置グループを単一の AZ に分散します>>
+* <<ランサムウェアからの保護>>
+* <<新しいデータレプリケーションポリシー>>
+* <<Kubernetes のボリュームアクセス制御>>
 
 
 
@@ -405,10 +405,10 @@ Kubernetes Persistent Volume に対してエクスポートポリシーを設定
 
 Cloud Manager 3.6.1 には、新機能と拡張機能が含まれています。
 
-*  for Cloud Volumes ONTAP 9.5 in Azure
-*  Provider Accounts
-*  to the AWS Cost report
-*  for new Azure regions
+* <<Azure での Cloud Volumes ONTAP 9.5 のサポート>>
+* <<クラウドプロバイダアカウント>>
+* <<AWS Cost レポートの機能強化>>
+* <<新しい Azure リージョンのサポート>>
 
 
 

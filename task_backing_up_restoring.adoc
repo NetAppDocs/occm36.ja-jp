@@ -44,4 +44,5 @@ image:screenshot_backup.gif["スクリーンショット： ［ ツール ］ �
 . バックアップを選択します。
 
 
+.結果
 Cloud Manager は、バックアップファイルからデータベースをリストアします。

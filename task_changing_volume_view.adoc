@@ -23,4 +23,5 @@ Cloud Manager には、ハイブリッドクラウド全体でストレージシ
 . View Selection （選択の表示）ページで、 * Storage System View （ストレージシステムビュー） * を選択し、 * Switch （スイッチ） * をクリックします。
 
 
+.結果
 Cloud Manager がボリュームビューに切り替わります。

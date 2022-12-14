@@ -109,6 +109,7 @@ image:screenshot_volume_view_ha_network.gif["スクリーンショット： 2 �
 
 
 
+.結果
 Cloud Manager は、既存のシステムまたは新しいシステムにボリュームを作成します。新しいシステムが必要な場合、ボリュームの作成には約 25 分かかります。
 
 
