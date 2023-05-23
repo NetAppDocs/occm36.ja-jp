@@ -84,7 +84,7 @@ iSCSI では浮動 IP アドレスが使用されないため、クロス VPC �
 iSCSI の場合、 ONTAP はマルチパス I/O （ MPIO ）と非対称論理ユニットアクセス（ ALUA ）を使用して、アクティブ最適化パスと非最適化パス間のパスフェイルオーバーを管理します。
 
 
-NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
+NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
 
 
 
@@ -107,7 +107,7 @@ Cloud Manager から正しい IP アドレスを簡単に特定するには、�
 単一の可用性ゾーン（ AZ ）に HA 構成を導入すると、 Cloud Volumes ONTAP ノードを実行するインスタンスで障害が発生した場合でも、データの高可用性を確保できます。すべてのデータは、 vPC の外部からネイティブにアクセスできます。
 
 
-NOTE: Cloud Manager によってが作成されます https://["AWS 分散配置グループ"^] をクリックすると、その配置グループ内の 2 つの HA ノードが起動します。配置グループは、インスタンスを別々の基盤ハードウェアに分散することで、同時障害のリスクを軽減します。この機能により、ディスク障害ではなく、コンピューティングの観点から冗長性が向上します。
+NOTE: Cloud Manager によってが作成されます https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["AWS 分散配置グループ"^] をクリックすると、その配置グループ内の 2 つの HA ノードが起動します。配置グループは、インスタンスを別々の基盤ハードウェアに分散することで、同時障害のリスクを軽減します。この機能により、ディスク障害ではなく、コンピューティングの観点から冗長性が向上します。
 
 
 
@@ -126,7 +126,7 @@ image:diagram_single_az.png["単一の可用性ゾーンでの ONTAP HA 構成�
 iSCSI の場合、 ONTAP はマルチパス I/O （ MPIO ）と非対称論理ユニットアクセス（ ALUA ）を使用して、アクティブ最適化パスと非最適化パス間のパスフェイルオーバーを管理します。
 
 
-NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
+NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
 
 NAS 構成では、障害が発生した場合に、データ IP アドレスを HA ノード間で移行できます。これにより、クライアントからストレージへのアクセスが保証されます。
 

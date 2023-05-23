@@ -59,7 +59,7 @@ NAS 構成の場合は、障害の発生時にデータ IP アドレスが HA �
 iSCSI の場合、 ONTAP はマルチパス I/O （ MPIO ）と非対称論理ユニットアクセス（ ALUA ）を使用して、アクティブ最適化パスと非最適化パス間のパスフェイルオーバーを管理します。
 
 
-NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
+NOTE: ALUA をサポートする具体的なホスト構成については、を参照してください http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"^] およびお使いのホストオペレーティングシステムに対応した Host Utilities の『 Installation and Setup Guide 』を参照してください。
 
 
 
@@ -78,7 +78,7 @@ Azure の Cloud Volumes ONTAP HA ペアに影響を及ぼす制限事項を次�
 * NFSv4 はサポートされていません。NFSv3 がサポートされています。
 * 一部のリージョンでは HA ペアがサポートされません。
 +
-https://["サポートされる Azure リージョンの一覧を参照してください"^]。
+https://cloud.netapp.com/cloud-volumes-global-regions["サポートされる Azure リージョンの一覧を参照してください"^]。
 
 
 

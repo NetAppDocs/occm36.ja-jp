@@ -37,7 +37,7 @@ image:screenshot_warning.gif["スクリーンショット：警告アイコン�
 ライセンスを期限内に更新しないと、 Cloud Volumes ONTAP システムは自動的にシャットダウンします。再起動すると、自動的にシャットダウンされます。
 
 
-NOTE: Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください http://["ONTAP 9 EMS 構成エクスプレスガイド"^]。
+NOTE: Cloud Volumes ONTAP では、 EMS （ Event Management System ）イベント通知を使用して、電子メール、 SNMP トラップホスト、または syslog サーバから通知することもできます。手順については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["ONTAP 9 EMS 構成エクスプレスガイド"^]。
 
 [discrete]
 === ライセンスの更新

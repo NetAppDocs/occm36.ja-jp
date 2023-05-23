@@ -14,10 +14,10 @@ summary: Cloud Manager システムに接続されている任意の Web ブラ�
 
 
 [role="lead"]
-Cloud Manager システムに接続されている任意の Web ブラウザから Cloud Manager にログインできます。を使用してログインする必要があります https://["NetApp Cloud Central"^] ユーザアカウント
+Cloud Manager システムに接続されている任意の Web ブラウザから Cloud Manager にログインできます。を使用してログインする必要があります https://cloud.netapp.com["NetApp Cloud Central"^] ユーザアカウント
 
 .手順
-. Web ブラウザを開き、にログインします https://["NetApp Cloud Central"^]。
+. Web ブラウザを開き、にログインします https://cloud.netapp.com["NetApp Cloud Central"^]。
 . クラウドデータサービスへ移動 * をクリックし、 * Cloud Volumes ONTAP * を選択します。
 . アクセスする Cloud Manager システムの Cloud Manager への移動をクリックします。
 +

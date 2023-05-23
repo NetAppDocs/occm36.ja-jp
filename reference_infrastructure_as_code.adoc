@@ -14,20 +14,20 @@ summary: DevOps チームは、さまざまなツールを使用して新しい�
 
 
 [role="lead"]
-このページのリソースを使用して、の統合を支援します Cloud Manager と Cloud Volumes ONTAP の組み合わせをで使用できます https://["コードとしてのインフラ"^]。
+このページのリソースを使用して、の統合を支援します Cloud Manager と Cloud Volumes ONTAP の組み合わせをで使用できます https://www.netapp.com/us/info/what-is-infrastructure-as-code-iac.aspx["コードとしてのインフラ"^]。
 
 DevOps チームは、さまざまなツールを使用して新しい環境のセットアップを自動化し、インフラをコードとして扱うことができます。Ansible と Terraform の 2 つのツールがあります。ネットアップでは、 Ansible と Terraform のサンプルを開発しました。このサンプルを使用することで、 DevOps チームは Cloud Manager を使用して Cloud Volumes ONTAP を自動化し、コードとしてインフラと統合できます。
 
-https://["自動化のサンプルを表示します"^]。
+https://github.com/edarzi/cloud-manager-automation-samples["自動化のサンプルを表示します"^]。
 
 たとえば、サンプルの Ansible プレイブックを使用して、 Cloud Manager と Cloud Volumes ONTAP を導入し、アグリゲートを作成し、ボリュームを作成できます。環境のサンプルを変更するか、サンプルに基づいて新しいプレイブックを作成します。
 
 * 関連リンク *
 
-* https://["NetApp Cloud ブログ： Using Cloud Manager REST API with Federated Access"^]
-* https://["ネットアップのクラウドブログ：「 Cloud Automation with Cloud Volumes ONTAP and REST"^]
-* https://["ネットアップのクラウドブログ： Automated Data Cloning for Cloud Based Testing of Software Applications"^]
-* https://["ネットアップのブログ：「 Infrastructure-as-Code （ IAC ） Accelerated with Ansible + NetApp"^]
-* https://["NetApp thePub ： Ansible による構成管理と自動化"^]
-* https://["NetApp thePub ： Ansible ONTAP の役割"^]
+* https://cloud.netapp.com/blog/using-cloud-manager-rest-apis-with-federated-access["NetApp Cloud ブログ： Using Cloud Manager REST API with Federated Access"^]
+* https://cloud.netapp.com/blog/cloud-automation-with-cloud-volumes-ontap-rest["ネットアップのクラウドブログ：「 Cloud Automation with Cloud Volumes ONTAP and REST"^]
+* https://cloud.netapp.com/blog/automated-data-cloning-for-cloud-based-testing["ネットアップのクラウドブログ： Automated Data Cloning for Cloud Based Testing of Software Applications"^]
+* https://blog.netapp.com/infrastructure-as-code-accelerated-with-ansible-netapp/["ネットアップのブログ：「 Infrastructure-as-Code （ IAC ） Accelerated with Ansible + NetApp"^]
+* https://netapp.io/configuration-management-and-automation/["NetApp thePub ： Ansible による構成管理と自動化"^]
+* https://netapp.io/2019/03/25/simplicity-at-its-finest-roles-for-ansible-ontap-use/["NetApp thePub ： Ansible ONTAP の役割"^]
 

@@ -22,14 +22,14 @@ Cloud Volumes ONTAP で Amazon 暗号化を使用する場合は、 AWS Key Mana
 CMK は、 AWS 管理の CMK または顧客管理の CMK にすることができます。Cloud Manager および Cloud Volumes ONTAP と同じ AWS アカウントにすることも、別の AWS アカウントにすることもできます。
 
 +
-https://["AWS ドキュメント：「 Customer Master Keys （ CMK ；カスタマーマスターキー）」"^]
+https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys["AWS ドキュメント：「 Customer Master Keys （ CMK ；カスタマーマスターキー）」"^]
 
 . 各 CMK のキーポリシーを変更します。変更するには、 Cloud Manager に a_key user_権限 を付与する IAM ロールを追加します。
 +
 IAM ロールをキーユーザとして追加すると、 Cloud Volumes ONTAP で CMK を使用する権限が Cloud Manager に付与されます。
 
 +
-https://["AWS のドキュメント：「キーの編集"^]
+https://docs.aws.amazon.com/kms/latest/developerguide/editing-keys.html["AWS のドキュメント：「キーの編集"^]
 
 . CMK が別の AWS アカウントにある場合は、次の手順を実行します。
 +
@@ -96,7 +96,7 @@ image:screenshot_cmk_add_accounts_dialog.gif["このスクリーンショット�
 }
 ----
 +
-このプロセスの詳細については、を参照してください https://["AWS ドキュメント：「外部 AWS アカウントによる CMK へのアクセスの許可"^]。
+このプロセスの詳細については、を参照してください https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html#key-policy-modifying-external-accounts["AWS ドキュメント：「外部 AWS アカウントによる CMK へのアクセスの許可"^]。
 
 
 

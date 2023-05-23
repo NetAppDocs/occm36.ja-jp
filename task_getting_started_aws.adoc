@@ -37,7 +37,7 @@ Cloud Volumes ONTAP から低コストのオブジェクトストレージにコ
 === image:number2.png["番号2."] AWS Marketplace から Cloud Volumes ONTAP に登録します
 
 [role="quick-margin-para"]
-から登録しています https://["AWS Marketplace で入手できます"^] は、ソフトウェアの条件に同意する必要があります。購読はマーケットプレイスからのみ行ってください。Cloud Manager はサポートされていませんが、どこからでも Cloud Volumes ONTAP を起動できます。
+から登録しています https://aws.amazon.com/marketplace/search/results?page=1&searchTerms=netapp+cloud+volumes+ontap["AWS Marketplace で入手できます"^] は、ソフトウェアの条件に同意する必要があります。購読はマーケットプレイスからのみ行ってください。Cloud Manager はサポートされていませんが、どこからでも Cloud Volumes ONTAP を起動できます。
 
 
 
@@ -47,7 +47,7 @@ Cloud Volumes ONTAP から低コストのオブジェクトストレージにコ
 NetApp Cloud Central から Cloud Manager を導入する場合は、インスタンスを導入する権限を持つ AWS アカウントを使用する必要があります。
 
 [role="quick-margin-list"]
-. AWS IAM コンソールに移動し、の内容をコピーして貼り付け、ポリシーを作成します https://["AWS 向けの NetApp Cloud Central ポリシー"^]。
+. AWS IAM コンソールに移動し、の内容をコピーして貼り付け、ポリシーを作成します https://mysupport.netapp.com/cloudontap/iampolicies["AWS 向けの NetApp Cloud Central ポリシー"^]。
 . IAM ユーザにポリシーを付加します。
 
 
@@ -56,7 +56,7 @@ NetApp Cloud Central から Cloud Manager を導入する場合は、インス�
 === image:number4.png["番号4."] NetApp Cloud Central から Cloud Manager を起動します
 
 [role="quick-margin-para"]
-Cloud Volumes ONTAP の導入と管理には、 Cloud Manager ソフトウェアが必要です。から Cloud Manager インスタンスを起動するには数分かかります https://["Cloud Central にアクセスできます"^]。
+Cloud Volumes ONTAP の導入と管理には、 Cloud Manager ソフトウェアが必要です。から Cloud Manager インスタンスを起動するには数分かかります https://cloud.netapp.com["Cloud Central にアクセスできます"^]。
 
 
 

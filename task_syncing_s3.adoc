@@ -14,7 +14,7 @@ summary: 運用環境を NetApp Cloud Sync と統合することで、 ONTAP ボ
 
 
 [role="lead"]
-作業環境をと統合することで、 ONTAP ボリュームのデータを AWS S3 バケットと同期できます https://["NetApp Cloud Sync の略"^]。その後、同期されたデータをセカンダリコピーとして使用したり、 EMR や RedShift などの AWS サービスを使用してデータを処理したりできます。
+作業環境をと統合することで、 ONTAP ボリュームのデータを AWS S3 バケットと同期できます https://www.netapp.com/us/cloud/data-sync-saas-product-details["NetApp Cloud Sync の略"^]。その後、同期されたデータをセカンダリコピーとして使用したり、 EMR や RedShift などの AWS サービスを使用してデータを処理したりできます。
 
 
 

@@ -20,7 +20,7 @@ BYOL システムを導入するには、 NetApp Support Site のアカウント
 
 video::V2fLTyztqYQ[youtube,width=848,height=480]
 .手順
-. ネットアップサポートサイトのアカウントがない場合は、 http://["1 名で登録します"^]。
+. ネットアップサポートサイトのアカウントがない場合は、 http://now.netapp.com/newuser/["1 名で登録します"^]。
 . Cloud Manager コンソールの右上にあるタスクドロップダウンリストをクリックし、 * Account Settings * を選択します。
 . [Add New Account* ] をクリックし、 [* NetApp Support Site* ] を選択します。
 . アカウントの名前を指定し、ユーザ名とパスワードを入力します。

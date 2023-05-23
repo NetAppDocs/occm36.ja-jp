@@ -14,7 +14,7 @@ summary: NetApp Cloud Central を使用して AWS で Cloud Manager を起動す
 
 
 [role="lead"]
-を使用して、 AWS で Cloud Manager を起動することを推奨します https://["NetApp Cloud Central"^]必要に応じて、 AWS Marketplace から起動できます。
+を使用して、 AWS で Cloud Manager を起動することを推奨します https://cloud.netapp.com["NetApp Cloud Central"^]必要に応じて、 AWS Marketplace から起動できます。
 
 
 TIP: AWS Marketplace から Cloud Manager を起動しても、 Cloud Manager は NetApp Cloud Central と統合されたままです。 link:concept_cloud_central.html["統合の詳細については、こちらをご覧ください。"]。
@@ -27,13 +27,13 @@ TIP: AWS Marketplace から Cloud Manager を起動しても、 Cloud Manager �
 +
 .. 次のサイトから Cloud Manager IAM ポリシーをダウンロードします。
 +
-https://["NetApp OnCommand Cloud Manager ： AWS と Azure のポリシー"^]
+https://mysupport.netapp.com/cloudontap/iampolicies["NetApp OnCommand Cloud Manager ： AWS と Azure のポリシー"^]
 
 .. IAM コンソールから、 Cloud Manager IAM ポリシーからテキストをコピーアンドペーストして、独自のポリシーを作成します。
 .. ロールタイプが Amazon EC2 の IAM ロールを作成し、前の手順で作成したポリシーをロールに付加します。
 
 
-. にアクセスします https://["AWS Marketplace の Cloud Manager のページ"^]。
+. にアクセスします https://aws.amazon.com/marketplace/pp/B018REK8QG["AWS Marketplace の Cloud Manager のページ"^]。
 . [* Continue （続行） ] をクリックします
 . Custom Launch タブで、お住まいの地域の * Launch with EC2 Console * をクリックして、次の項目を選択します。
 +

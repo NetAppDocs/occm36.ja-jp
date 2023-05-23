@@ -50,7 +50,7 @@ Azure で Cloud Volumes ONTAP システムを作成すると、リソースグ�
 | リソースグループ名 | [ デフォルトを使用する *] をオフにした場合は、新しいリソースグループの名前を入力できます。既存のリソースグループを使用する場合は、 API を使用する必要があります。 
 
 
-| タグ | タグは、 Azure リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP システムおよびシステムに関連付けられた各 Azure リソースにタグを追加します。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://["Microsoft Azure のドキュメント：「 Using tags to organize your Azure resources"^]。 
+| タグ | タグは、 Azure リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP システムおよびシステムに関連付けられた各 Azure リソースにタグを追加します。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://azure.microsoft.com/documentation/articles/resource-group-using-tags/["Microsoft Azure のドキュメント：「 Using tags to organize your Azure resources"^]。 
 
 
 | クレデンシャル | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。 
@@ -177,7 +177,7 @@ Cloud Manager は Cloud Volumes ONTAP システムを導入します。タイム
 
 Cloud Volumes ONTAP システムの導入で問題が発生した場合は、障害メッセージを確認してください。作業環境を選択し、 * 環境の再作成 * をクリックすることもできます。
 
-詳細については、を参照してください https://["NetApp Cloud Volumes ONTAP のサポート"^]。
+詳細については、を参照してください https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]。
 
 .完了後
 * CIFS 共有をプロビジョニングした場合は、ファイルとフォルダに対する権限をユーザまたはグループに付与し、それらのユーザが共有にアクセスしてファイルを作成できることを確認します。

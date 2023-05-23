@@ -104,7 +104,7 @@ image:diagram_replication_snapvault_policy.png["この図は、 Snapshot ポリ�
 
 データを複製する前に、 Cloud Volumes ONTAP システムと ONTAP クラスタの両方で特定の要件が満たされていることを確認する必要があります。
 
-バージョン要件:: データを複製する前に、ソースボリュームとデスティネーションボリュームで互換性のある ONTAP バージョンが実行されていることを確認する必要があります。詳細については、を参照してください http://["データ保護パワーガイド"^]。
+バージョン要件:: データを複製する前に、ソースボリュームとデスティネーションボリュームで互換性のある ONTAP バージョンが実行されていることを確認する必要があります。詳細については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/home.html["データ保護パワーガイド"^]。
 Cloud Volumes ONTAP 固有の要件::
 +
 --
@@ -236,7 +236,7 @@ image:screenshot_replication_managing.gif["スクリーンショット： ［ Re
 
 IMPORTANT: ボリュームを再同期すると、デスティネーションボリュームの内容がソースボリュームの内容によって上書きされます。
 
-デスティネーションボリュームからソースボリュームへデータを再同期化する逆再同期を実行するには、を参照してください http://["ONTAP 9 ボリュームディザスタリカバリエクスプレスガイド"^]。
+デスティネーションボリュームからソースボリュームへデータを再同期化する逆再同期を実行するには、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["ONTAP 9 ボリュームディザスタリカバリエクスプレスガイド"^]。
 
 
 

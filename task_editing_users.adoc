@@ -20,7 +20,7 @@ summary: Cloud Manager でユーザアカウントを変更するには、通知
 Cloud Manager でユーザアカウントを変更するには、通知レポートを有効または無効にします。
 
 .このタスクについて
-でパスワードとユーザ情報を変更する必要があります https://["NetApp Cloud Central"^]。
+でパスワードとユーザ情報を変更する必要があります https://cloud.netapp.com["NetApp Cloud Central"^]。
 
 .手順
 . Cloud Manager コンソールの右上にあるユーザアイコンをクリックし、 * View Users * を選択します。

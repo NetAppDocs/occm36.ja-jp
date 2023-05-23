@@ -32,9 +32,9 @@ Cloud Manager では、 AWS での Cloud Volumes ONTAP の実行に関連する�
 "ce:GetTags"
 ----
 +
-これらのアクションは最新のに含まれています https://["Cloud Manager ポリシー"^]。これらの権限は、 NetApp Cloud Central から自動的に導入された新しいシステムに含まれます。
+これらのアクションは最新のに含まれています https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager ポリシー"^]。これらの権限は、 NetApp Cloud Central から自動的に導入された新しいシステムに含まれます。
 
-.. https://["* WorkingEnvironmentId* タグをアクティブにします"^]。
+.. https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html["* WorkingEnvironmentId* タグをアクティブにします"^]。
 +
 AWS のコストを追跡するために、 Cloud Manager はコスト割り当てタグを Cloud Volumes ONTAP インスタンスに割り当てます。最初の作業環境を作成したら、 * WorkingEnvironmentId * タグをアクティブ化します。ユーザ定義のタグは、請求とコスト管理のコンソールでアクティブ化するまでは AWS 請求レポートに表示されません。
 

@@ -36,10 +36,10 @@ image:screenshot_ntp_server_api.gif["NTP API 呼び出しを表示する Swagger
 
 
 
-| オプション： AutoSupport を設定します | AutoSupport は、システムの状態をプロアクティブに監視し、デフォルトでメッセージをネットアップのテクニカルサポートに自動的に送信します。インスタンスを起動する前に Cloud Manager 管理者が Cloud Manager にプロキシサーバを追加した場合、 Cloud Volumes ONTAP は AutoSupport メッセージにそのプロキシサーバを使用するように設定されます。AutoSupport をテストして、メッセージを送信できることを確認する必要があります。手順については、 System Manager のヘルプまたはを参照してください http://["ONTAP 9 システムアドミニストレーションリファレンス"^]。 
+| オプション： AutoSupport を設定します | AutoSupport は、システムの状態をプロアクティブに監視し、デフォルトでメッセージをネットアップのテクニカルサポートに自動的に送信します。インスタンスを起動する前に Cloud Manager 管理者が Cloud Manager にプロキシサーバを追加した場合、 Cloud Volumes ONTAP は AutoSupport メッセージにそのプロキシサーバを使用するように設定されます。AutoSupport をテストして、メッセージを送信できることを確認する必要があります。手順については、 System Manager のヘルプまたはを参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["ONTAP 9 システムアドミニストレーションリファレンス"^]。 
 
 
-| オプション： EMS を設定します | イベント管理システム（ EMS ）は、 Cloud Volumes ONTAP システムで発生したイベントに関する情報を収集して表示します。イベント通知を受信するには、イベントの宛先（電子メールアドレス、 SNMP トラップホスト、または syslog サーバ）とイベントのルートを特定のイベントの重大度に設定します。EMS は CLI を使用して設定できます。手順については、を参照してください http://["ONTAP 9 EMS 構成エクスプレスガイド"^]。 
+| オプション： EMS を設定します | イベント管理システム（ EMS ）は、 Cloud Volumes ONTAP システムで発生したイベントに関する情報を収集して表示します。イベント通知を受信するには、イベントの宛先（電子メールアドレス、 SNMP トラップホスト、または syslog サーバ）とイベントのルートを特定のイベントの重大度に設定します。EMS は CLI を使用して設定できます。手順については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-ems/home.html["ONTAP 9 EMS 構成エクスプレスガイド"^]。 
 
 
 | オプション：複数の AWS アベイラビリティゾーンに HA システムの SVM 管理ネットワークインターフェイス（ LIF ）を作成する  a| 
@@ -52,5 +52,5 @@ network interface create -vserver svm_cloud -lif svm_mgmt -role data -data-proto
 ....
 
 
-| オプション：設定ファイルのバックアップ場所を変更します | Cloud Volumes ONTAP は、適切に動作するために必要な設定可能なオプションに関する情報を含む構成バックアップファイルを自動的に作成します。デフォルトでは、 Cloud Volumes ONTAP は 8 時間ごとにファイルを Cloud Manager ホストにバックアップします。バックアップを別の場所に送信する場合は、データセンターまたは AWS 内の FTP または HTTP サーバにバックアップの場所を変更できます。たとえば、 FAS ストレージシステムのバックアップ場所がすでにあるとします。バックアップの場所は、 CLI を使用して変更できます。を参照してください http://["ONTAP 9 システムアドミニストレーションリファレンス"^]。 
+| オプション：設定ファイルのバックアップ場所を変更します | Cloud Volumes ONTAP は、適切に動作するために必要な設定可能なオプションに関する情報を含む構成バックアップファイルを自動的に作成します。デフォルトでは、 Cloud Volumes ONTAP は 8 時間ごとにファイルを Cloud Manager ホストにバックアップします。バックアップを別の場所に送信する場合は、データセンターまたは AWS 内の FTP または HTTP サーバにバックアップの場所を変更できます。たとえば、 FAS ストレージシステムのバックアップ場所がすでにあるとします。バックアップの場所は、 CLI を使用して変更できます。を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["ONTAP 9 システムアドミニストレーションリファレンス"^]。 
 |===

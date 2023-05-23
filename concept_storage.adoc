@@ -48,11 +48,11 @@ EBS ディスクタイプの違いは次のとおりです。
 
 NOTE: コールド HDD ディスクは、 HA 構成とデータ階層化ではサポートされていません。
 
-これらのディスクのユースケースの詳細については、を参照してください http://["AWS ドキュメント：「 EBS Volume Types"^]。
+これらのディスクのユースケースの詳細については、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
 
 link:task_planning_your_config.html#sizing-your-system-in-aws["でディスクタイプとディスクサイズを選択する方法について説明します AWS のシステムを管理できます"]。
 
-https://["Cloud Volumes ONTAP のストレージの制限を確認します"]。
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Cloud Volumes ONTAP のストレージの制限を確認します"]。
 
 
 
@@ -78,8 +78,8 @@ Azure では、アグリゲートに同じサイズのディスクを 12 本ま�
 HA ペア:: HA ペアでは、最大ディスクサイズが 8TB の Premium ページ Blob を使用します。
 
 
-これらのディスクのユースケースの詳細については、を参照してください https://["Microsoft Azure のドキュメント：「 Introduction to Microsoft Azure Storage"^]。
+これらのディスクのユースケースの詳細については、を参照してください https://azure.microsoft.com/documentation/articles/storage-introduction/["Microsoft Azure のドキュメント：「 Introduction to Microsoft Azure Storage"^]。
 
 link:task_planning_your_config.html#sizing-your-system-in-azure["でディスクタイプとディスクサイズを選択する方法について説明します Azure の既存のシステムを"]。
 
-https://["Cloud Volumes ONTAP のストレージの制限を確認します"]。
+https://docs.netapp.com/cloud-volumes-ontap/us-en/reference_storage_limits_95.html["Cloud Volumes ONTAP のストレージの制限を確認します"]。

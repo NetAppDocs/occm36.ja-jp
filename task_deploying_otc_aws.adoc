@@ -50,7 +50,7 @@ Cloud Volumes ONTAP を AWS で起動する場合は、 Cloud Manager で新し�
 | 作業環境名 | Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと Amazon EC2 インスタンスの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。 
 
 
-| タグを追加します | AWS タグは、 AWS リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP インスタンスおよびインスタンスに関連付けられた各 AWS リソースにタグを追加します。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://["AWS ドキュメント：「 Tagging your Amazon EC2 Resources"^]。 
+| タグを追加します | AWS タグは、 AWS リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP インスタンスおよびインスタンスに関連付けられた各 AWS リソースにタグを追加します。作業環境を作成するときに、ユーザインターフェイスから最大 4 つのタグを追加し、作成後にさらに追加できます。API では、作業環境の作成時にタグを 4 つに制限することはありません。タグの詳細については、を参照してください https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS ドキュメント：「 Tagging your Amazon EC2 Resources"^]。 
 
 
 | クレデンシャル | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。 
@@ -89,7 +89,7 @@ NetApp Support Site のアカウントは、従量課金制の場合は任意で
 
 . IAM ロールページでは、 Cloud Manager がロールを作成できるようにデフォルトオプションをそのまま使用する必要があります。
 +
-独自のポリシーを使用する場合は、それが満たされている必要があります http://["Cloud Volumes ONTAP ノードのポリシーの要件"^]。
+独自のポリシーを使用する場合は、それが満たされている必要があります http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP ノードのポリシーの要件"^]。
 
 . Licensing （ライセンス）ページで、必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択して、 * Continue （続行） * をクリックします。
 +
@@ -192,7 +192,7 @@ Cloud Manager が Cloud Volumes ONTAP インスタンスを起動します。タ
 
 Cloud Volumes ONTAP インスタンスの起動時に問題が発生した場合は、障害メッセージを確認してください。また、作業環境を選択して、 [ 環境の再作成 ] をクリックすることもできます。
 
-詳細については、を参照してください https://["NetApp Cloud Volumes ONTAP のサポート"^]。
+詳細については、を参照してください https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]。
 
 .完了後
 * CIFS 共有をプロビジョニングした場合は、ファイルとフォルダに対する権限をユーザまたはグループに付与し、それらのユーザが共有にアクセスしてファイルを作成できることを確認します。
@@ -236,7 +236,7 @@ Cloud Volumes ONTAP HA ペアを AWS で起動する場合は、 Cloud Manager �
 | 作業環境名 | Cloud Manager は、作業環境名を使用して、 Cloud Volumes ONTAP システムと Amazon EC2 インスタンスの両方に名前を付けます。また、このオプションを選択した場合は、事前定義されたセキュリティグループのプレフィックスとして名前が使用されます。 
 
 
-| タグを追加します | AWS タグは、 AWS リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP インスタンスおよびインスタンスに関連付けられた各 AWS リソースにタグを追加します。タグの詳細については、を参照してください https://["AWS ドキュメント：「 Tagging your Amazon EC2 Resources"^]。 
+| タグを追加します | AWS タグは、 AWS リソースのメタデータです。Cloud Manager は、 Cloud Volumes ONTAP インスタンスおよびインスタンスに関連付けられた各 AWS リソースにタグを追加します。タグの詳細については、を参照してください https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS ドキュメント：「 Tagging your Amazon EC2 Resources"^]。 
 
 
 | クレデンシャル | これらは、 Cloud Volumes ONTAP クラスタ管理アカウントのクレデンシャルです。これらのクレデンシャルを使用して、 OnCommand System Manager またはその CLI を使用して Cloud Volumes ONTAP に接続できます。 
@@ -263,7 +263,7 @@ IP アドレスは、その地域のすべての VPC の CIDR ブロックの外
 
 . 複数の AZ を選択した場合は、フローティング IP アドレスへのルートを含むルーティングテーブルを選択し、 * Continue * をクリックします。
 +
-複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが Cloud Volumes ONTAP HA ペアにアクセスできない場合があります。ルーティングテーブルの詳細については、を参照してください http://["AWS のドキュメント：「 Route Tables"^]。
+複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが Cloud Volumes ONTAP HA ペアにアクセスできない場合があります。ルーティングテーブルの詳細については、を参照してください http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS のドキュメント：「 Route Tables"^]。
 
 . [ データの暗号化 ] ページで、 [ データの暗号化なし ] または [AWS 管理暗号化 ] を選択します。
 +
@@ -288,7 +288,7 @@ NetApp Support Site のアカウントは、従量課金制の場合は任意で
 
 . IAM ロールページでは、 Cloud Manager がロールを作成できるようにデフォルトのオプションをそのまま使用する必要があります。
 +
-独自のポリシーを使用する場合は、それが満たされている必要があります http://["Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター"^]。
+独自のポリシーを使用する場合は、それが満たされている必要があります http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Volumes ONTAP ノードと HA のポリシー要件 メディエーター"^]。
 
 . Licensing （ライセンス）ページで、必要に応じて Cloud Volumes ONTAP のバージョンを変更し、ライセンス、インスタンスタイプ、インスタンステナンシーを選択して、 * Continue （続行） * をクリックします。
 +
@@ -388,7 +388,7 @@ Cloud Manager が Cloud Volumes ONTAP HA ペアを起動します。タイムラ
 
 HA ペアの起動で問題が発生した場合は、障害メッセージを確認します。また、作業環境を選択して、 [ 環境の再作成 ] をクリックすることもできます。
 
-詳細については、を参照してください https://["NetApp Cloud Volumes ONTAP のサポート"^]。
+詳細については、を参照してください https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]。
 
 .完了後
 * CIFS 共有をプロビジョニングした場合は、ファイルとフォルダに対する権限をユーザまたはグループに付与し、それらのユーザが共有にアクセスしてファイルを作成できることを確認します。

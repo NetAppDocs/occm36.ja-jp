@@ -53,7 +53,7 @@ AWS サービス（ amazonaws.com ）：
 * シンプルなストレージサービス（ S3 ）
 
 
-正確なエンドポイントは、 Cloud Volumes ONTAP を導入する地域によって異なります。 https://["詳細については、 AWS のマニュアルを参照してください。"^]
+正確なエンドポイントは、 Cloud Volumes ONTAP を導入する地域によって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細については、 AWS のマニュアルを参照してください。"^]
 | Cloud Manager で Cloud Volumes ONTAP を AWS に導入して管理できるようにします。 
 
 
