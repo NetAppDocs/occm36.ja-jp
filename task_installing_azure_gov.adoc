@@ -16,7 +16,7 @@ summary: Azure Government Marketplace から Cloud Manager を導入し、 Cloud
 [role="lead"]
 Cloud Manager を米国政府機関のリージョンで運用開始するには、まず Azure Government Marketplace から Cloud Manager を導入します。次に、 Cloud Volumes ONTAP システムを導入して管理するために Cloud Manager に必要な権限を指定します。
 
-サポートされている Azure US Government リージョンのリストについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
+サポートされている Azure US Government リージョンのリストについては、を参照してください https://["Cloud Volume グローバルリージョン"^]。
 
 
 
@@ -45,7 +45,7 @@ Cloud Manager は、 Azure US Government Marketplace のイメージとして提
 
 . Cloud Manager 仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。
 +
-http://_ipaddress_:80[]
+http://[]
 
 +
 ログインすると、 Cloud Manager によって、このシステムの管理者としてユーザアカウントが自動的に追加されます。
@@ -60,7 +60,7 @@ Cloud Manager のインストールとセットアップが完了しました。
 
 == 管理対象 ID を使用した Cloud Manager への Azure 権限の付与
 
-アクセス許可を設定する最も簡単な方法は、を有効にすることです https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["管理された ID"^] Cloud Manager 仮想マシンで、必要な権限を仮想マシンに割り当てます。必要に応じて、別の方法がになります link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["サービスプリンシパルを使用して Azure 権限を付与します"]。
+アクセス許可を設定する最も簡単な方法は、を有効にすることです https://["管理された ID"^] Cloud Manager 仮想マシンで、必要な権限を仮想マシンに割り当てます。必要に応じて、別の方法がになります link:task_adding_cloud_accounts.html#granting-azure-permissions-using-a-service-principal["サービスプリンシパルを使用して Azure 権限を付与します"]。
 
 .手順
 . Cloud Manager 仮想マシンで管理対象 ID を有効にします。
@@ -71,7 +71,7 @@ Cloud Manager のインストールとセットアップが完了しました。
 
 . Cloud Manager ポリシーを使用してカスタムロールを作成します。
 +
-.. をダウンロードします https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure ポリシー"^]。
+.. をダウンロードします https://["Cloud Manager Azure ポリシー"^]。
 .. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、 JSON ファイルを変更します。
 +
 ユーザが Cloud Volumes ONTAP システムを作成する Azure サブスクリプションごとに ID を追加する必要があります。
@@ -103,7 +103,7 @@ Cloud Manager のインストールとセットアップが完了しました。
 *** OnCommand Cloud Manager Operator * ロールを選択します。
 +
 
-NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
 
 *** 仮想マシン * へのアクセスを割り当てます。
 *** Cloud Manager 仮想マシンが作成されたサブスクリプションを選択します。

@@ -77,7 +77,7 @@ HA ペアのアップグレードは中断されません。無停止アップ�
 
 アップグレードまたはダウングレード可能な ONTAP のバージョンは、システムで現在実行している ONTAP のバージョンによって異なります。
 
-バージョン要件については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-dot-upgrade/GUID-AC0EB781-583F-4C90-A4C4-BC7B14CEFD39.html["ONTAP 9 ドキュメント：「 Cluster update requirements"^]。
+バージョン要件については、を参照してください http://["ONTAP 9 ドキュメント：「 Cluster update requirements"^]。
 
 
 
@@ -172,7 +172,7 @@ Cloud Volumes ONTAP ソフトウェアイメージを HTTP サーバまたは FT
 
 NOTE: 事前定義された Cloud Volumes ONTAP セキュリティグループでは、デフォルトで発信 HTTP 接続と FTP 接続が許可されます。
 
-. からソフトウェアイメージを取得します https://mysupport.netapp.com/products/p/cloud_ontap.html["ネットアップサポートサイト"^]。
+. からソフトウェアイメージを取得します https://["ネットアップサポートサイト"^]。
 . ソフトウェアイメージを、ファイルの提供元の HTTP サーバまたは FTP サーバ上のディレクトリにコピーします。
 . Cloud Manager の作業環境で、メニューアイコンをクリックし、 * Advanced > Update Cloud Volumes ONTAP * をクリックします。
 . アップデートソフトウェアページで、「 URL から利用可能なイメージを選択」を選択し、 URL を入力して「 * イメージの変更 * 」をクリックします。

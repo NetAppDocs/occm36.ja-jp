@@ -82,8 +82,8 @@ Cloud Manager へのログインに使用する電子メールアドレスが Cl
 
 システムで LDAP を使用している場合、ネットアップはシステムを Cloud Central と自動的に統合することはできません。次の手順を手動で実行する必要があります。
 
-. から新しい Cloud Manager システムを導入します https://cloud.netapp.com/["NetApp Cloud Central"^]。
-. https://services.cloud.netapp.com/misc/federation-support["新しいシステムで LDAP を設定します。"^]。
+. から新しい Cloud Manager システムを導入します https://["NetApp Cloud Central"^]。
+. https://["新しいシステムで LDAP を設定します。"^]。
 . link:task_adding_ontap_cloud.html["既存の Cloud Volumes ONTAP システムを検出"] 新しい Cloud Manager システムから作成します。
 . 古い Cloud Manager システムを削除します。
 

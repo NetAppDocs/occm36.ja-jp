@@ -14,7 +14,7 @@ summary: Cloud Manager には、 AWS と Azure で自分の代わりにアクシ
 
 
 [role="lead"]
-Cloud Manager には、 AWS と Azure で自分の代わりにアクションを実行するための権限が必要です。これらの権限はに含まれています https://mysupport.netapp.com/info/web/ECMP11022837.html["ネットアップが提供するポリシー"^]。このような権限を持つ Cloud Manager の機能を理解しておく必要があるかもしれません。
+Cloud Manager には、 AWS と Azure で自分の代わりにアクションを実行するための権限が必要です。これらの権限はに含まれています https://["ネットアップが提供するポリシー"^]。このような権限を持つ Cloud Manager の機能を理解しておく必要があるかもしれません。
 
 
 

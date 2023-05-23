@@ -19,7 +19,7 @@ OnCommand Cloud Manager では、 NetApp Cloud Volumes ONTAP を導入して管�
 == 最新情報をご確認ください
 
 * link:reference_new_occm.html["Cloud Manager の新機能"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_new_95.html["Cloud Volumes ONTAP の新機能"^]
+* https://["Cloud Volumes ONTAP の新機能"^]
 
 
 
@@ -28,7 +28,7 @@ OnCommand Cloud Manager では、 NetApp Cloud Volumes ONTAP を導入して管�
 
 * link:task_getting_started_aws.html["AWS を始めましょう"]
 * link:task_getting_started_azure.html["Azure で始めましょう"]
-* https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["Cloud Volumes ONTAP でサポートされている構成を検索します"^]
+* https://["Cloud Volumes ONTAP でサポートされている構成を検索します"^]
 * link:reference_networking_cloud_manager.html["Cloud Manager の詳細なネットワーク要件を確認します"]
 * link:reference_networking_aws.html["Cloud Volumes ONTAP for AWS の詳細なネットワーク要件を確認します"]
 * link:reference_networking_azure.html["Cloud Volumes ONTAP for Azure の詳細なネットワーク要件を確認します"]
@@ -47,7 +47,7 @@ OnCommand Cloud Manager では、 NetApp Cloud Volumes ONTAP を導入して管�
 
 == 同僚とつながり、サポートを受け、詳細情報を入手します
 
-* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["ネットアップコミュニティ：クラウドデータサービス"^]
-* https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]
+* https://["ネットアップコミュニティ：クラウドデータサービス"^]
+* https://["NetApp Cloud Volumes ONTAP のサポート"^]
 * link:reference_additional_info.html["ヘルプを参照したり、詳細情報を参照したりするには"]
 

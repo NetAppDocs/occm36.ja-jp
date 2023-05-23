@@ -37,7 +37,7 @@ image:screenshot_enabling_worm.gif["に、新しい作業環境を作成する�
 
 アプリケーションを使用して、 NFS または CIFS を介してファイルを WORM にコミットしたり、 ONTAP CLI を使用してファイルを WORM に自動コミットしたりできます。また、追記可能 WORM ファイルを使用して、ログ情報のように増分的に書き込まれるデータを保持することもできます。
 
-Cloud Volumes ONTAP システムで WORM ストレージをアクティブにした後は、 WORM ストレージのすべての管理に ONTAP CLI を使用する必要があります。手順については、を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html["ONTAP のドキュメント"^]。
+Cloud Volumes ONTAP システムで WORM ストレージをアクティブにした後は、 WORM ストレージのすべての管理に ONTAP CLI を使用する必要があります。手順については、を参照してください http://["ONTAP のドキュメント"^]。
 
 
 NOTE: WORM ストレージに対する Cloud Volumes ONTAP のサポートは、 SnapLock Enterprise モードと同等です。

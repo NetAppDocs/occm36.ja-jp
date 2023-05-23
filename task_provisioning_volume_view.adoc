@@ -57,7 +57,7 @@ Cloud Manager を使用して、 AWS ストレージ上にエンタープライ�
 ** コールド HDD ディスクは、パフォーマンスが非常に低いため、バックアップ用、またはアクセス頻度の低いデータ用です。スループットに最適化された HDD ディスクと同様に、パフォーマンスはスループットの観点から定義されます。
 
 
-詳細については、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+詳細については、を参照してください http://["AWS ドキュメント：「 EBS Volume Types"^]。
 
 |===
 +
@@ -86,7 +86,7 @@ image:screenshot_volume_view_create.gif["スクリーンショット： Create N
 ** スループットに最適化された HDD ディスクは、高速で一貫したスループットを必要とする頻繁にアクセスされるワークロードに適しています
 
 
-詳細については、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html["AWS ドキュメント：「 EBS Volume Types"^]。
+詳細については、を参照してください http://["AWS ドキュメント：「 EBS Volume Types"^]。
 
 
 
@@ -99,7 +99,7 @@ image:screenshot_volume_view_create.gif["スクリーンショット： Create N
 | フローティング IP | IP アドレスは、その地域のすべての VPC の CIDR ブロックの外側にある必要があります。 
 
 
-| ルートテーブル | 複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが HA ペアにアクセスできないことがあります。詳細については、を参照してください  http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS のドキュメント：「 Route Tables"^]。 
+| ルートテーブル | 複数のルートテーブルがある場合は、正しいルートテーブルを選択することが非常に重要です。そうしないと、一部のクライアントが HA ペアにアクセスできないことがあります。詳細については、を参照してください  http://["AWS のドキュメント：「 Route Tables"^]。 
 |===
 +
 次の図は、ノードとメディエータページを示しています。各インスタンスは、個別の可用性ゾーンにあります。

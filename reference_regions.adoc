@@ -16,4 +16,4 @@ summary: Cloud Manager および Cloud Volumes ONTAP は、多数の AWS リー�
 [role="lead"]
 Cloud Manager および Cloud Volumes ONTAP は、多数の AWS リージョンと Microsoft Azure リージョンでサポートされています。
 
-https://cloud.netapp.com/cloud-volumes-global-regions["サポートされているリージョンのリストを表示するには、ここをクリックしてください"^]。
+https://["サポートされているリージョンのリストを表示するには、ここをクリックしてください"^]。

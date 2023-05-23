@@ -177,6 +177,6 @@ iSCSI LUN を作成する場合は、 System Manager から作成する必要が
 . 「 * Create * 」をクリックし、プロンプトに従って LUN を作成します。
 . ホストから LUN に接続します。
 +
-手順については、を参照してください http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Host Utilities のマニュアル"^] オペレーティングシステムに応じて提供されます。
+手順については、を参照してください http://["Host Utilities のマニュアル"^] オペレーティングシステムに応じて提供されます。
 
 

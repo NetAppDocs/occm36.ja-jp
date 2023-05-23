@@ -35,7 +35,7 @@ Cloud Manager と Cloud Volumes ONTAP が複数のエンドポイントに接続
 NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager 仮想マシンを導入する権限を持つ Azure アカウントを使用する必要があります。
 
 [role="quick-margin-list"]
-. をダウンロードします https://mysupport.netapp.com/cloudontap/iampolicies["Azure 向けの NetApp Cloud Central ポリシー"^]。
+. をダウンロードします https://["Azure 向けの NetApp Cloud Central ポリシー"^]。
 . 「割り当て可能スコープ」フィールドに Azure サブスクリプション ID を追加して、 JSON ファイルを変更します。
 . JSON ファイルを使用して、 Azure で _Azure SetupAsService_という 名前のカスタムロールを作成します。
 +
@@ -49,7 +49,7 @@ NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Mana
 === image:number3.png["番号3."] NetApp Cloud Central から Cloud Manager を起動します
 
 [role="quick-margin-para"]
-Cloud Volumes ONTAP の導入と管理には、 Cloud Manager ソフトウェアが必要です。から Cloud Manager インスタンスを起動するには数分かかります https://cloud.netapp.com["Cloud Central にアクセスできます"^]。
+Cloud Volumes ONTAP の導入と管理には、 Cloud Manager ソフトウェアが必要です。から Cloud Manager インスタンスを起動するには数分かかります https://["Cloud Central にアクセスできます"^]。
 
 
 

@@ -16,11 +16,11 @@ summary: Cloud Manager と Cloud Volumes ONTAP の詳細については、ビデ
 [role="lead"]
 Cloud Manager と Cloud Volumes ONTAP の詳細については、ビデオ、フォーラム、サポートなどのさまざまなリソースを参照してください。
 
-* https://www.youtube.com/playlist?list=PLdXI3bZJEw7lnoRo8FBKsX1zHbK8AQOoT["Cloud Manager と Cloud Volumes ONTAP のビデオ"^]
+* https://["Cloud Manager と Cloud Volumes ONTAP のビデオ"^]
 +
 Cloud Volumes ONTAP を AWS と Azure に導入して管理する方法と、ハイブリッドクラウド全体でデータをレプリケートする方法を紹介するビデオをご覧ください。
 
-* http://mysupport.netapp.com/cloudontap/support/iampolicies["Cloud Manager のポリシー"^]
+* http://["Cloud Manager のポリシー"^]
 +
 Cloud Manager が AWS および Azure でアクションを実行するために必要な権限を含む JSON ファイルをダウンロードします。
 
@@ -30,41 +30,41 @@ API の概要、使用方法の例、 API リファレンスを紹介します�
 
 * Cloud Volumes ONTAP のトレーニング
 +
-** https://learningcenter.netapp.com/LC?ObjectType=WBT&ObjectID=00368390["Cloud Volumes ONTAP の基礎"^]
-** https://learningcenter.netapp.com/LC?ObjectType=WBT&ObjectID=00369436["Azure 向け Cloud Volumes ONTAP の導入と管理"^]
+** https://["Cloud Volumes ONTAP の基礎"^]
+** https://["Azure 向け Cloud Volumes ONTAP の導入と管理"^]
 
 
 * テクニカルレポート
 +
-** https://www.netapp.com/us/media/tr-4383.pdf["NetApp テクニカルレポート 4383 ：アプリケーションワークロードを使用した Amazon Web Services における Cloud Volumes ONTAP のパフォーマンス特性"^]
-** https://www.netapp.com/us/media/tr-4671.pdf["NetApp テクニカルレポート 4671 ：アプリケーションワークロードを使用した Azure における Cloud Volumes ONTAP のパフォーマンス特性評価"^]
+** https://["NetApp テクニカルレポート 4383 ：アプリケーションワークロードを使用した Amazon Web Services における Cloud Volumes ONTAP のパフォーマンス特性"^]
+** https://["NetApp テクニカルレポート 4671 ：アプリケーションワークロードを使用した Azure における Cloud Volumes ONTAP のパフォーマンス特性評価"^]
 
 
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["『 Cloud Volumes ONTAP 9SVM Disaster Recovery Preparation Express Guide 』を参照してください"^]
+* https://["『 Cloud Volumes ONTAP 9SVM Disaster Recovery Preparation Express Guide 』を参照してください"^]
 +
 ディザスタリカバリに備えて、デスティネーション SVM を迅速に設定する方法について説明します。
 
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["『 Cloud Volumes ONTAP 9SVM Disaster Recovery Express Guide 』を参照してください"^]
+* https://["『 Cloud Volumes ONTAP 9SVM Disaster Recovery Express Guide 』を参照してください"^]
 +
 災害発生後にデスティネーション SVM を迅速にアクティブ化し、ソース SVM を再アクティブ化する方法について説明します。
 
-* http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]
+* http://["ONTAP 9 ドキュメンテーション・センター"^]
 +
 Cloud Volumes ONTAP の使用に役立つ ONTAP の製品マニュアルにアクセスしてください。
 
-* https://mysupport.netapp.com/cloudontap["NetApp Cloud Volumes ONTAP のサポート"^]
+* https://["NetApp Cloud Volumes ONTAP のサポート"^]
 +
 サポートリソースにアクセスして、 Cloud Volumes ONTAP に関するヘルプやトラブルシューティングを参照してください。
 
-* https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS["ネットアップコミュニティ：クラウドデータサービス"^]
+* https://["ネットアップコミュニティ：クラウドデータサービス"^]
 +
 同僚とつながり、質問をしたり、アイデアを交換したり、リソースを見つけたり、ベストプラクティスを共有したりします。
 
-* http://cloud.netapp.com/["NetApp Cloud Central"^]
+* http://["NetApp Cloud Central"^]
 +
 クラウド向けのその他のネットアップ製品とソリューションに関する情報をご覧ください。
 
-* http://docs.netapp.com["ネットアップの製品マニュアル"^]
+* http://["ネットアップの製品マニュアル"^]
 +
 手順、リソース、回答については、ネットアップの製品マニュアルを参照してください。
 

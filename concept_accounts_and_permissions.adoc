@@ -26,7 +26,7 @@ Cloud Manager では、 Cloud Volumes ONTAP システムを導入するクラウ
 
 === 初期の AWS アカウント
 
-NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager インスタンスを起動する権限を持つ AWS アカウントを使用する必要があります。必要な権限は、に表示されます https://mysupport.netapp.com/cloudontap/iampolicies["AWS 向けの NetApp Cloud Central ポリシー"^]。
+NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager インスタンスを起動する権限を持つ AWS アカウントを使用する必要があります。必要な権限は、に表示されます https://["AWS 向けの NetApp Cloud Central ポリシー"^]。
 
 Cloud Central は、 AWS で Cloud Manager インスタンスを起動すると、 IAM ロールとインスタンスのインスタンスプロファイルを作成します。また、 Cloud Manager に、その AWS アカウントで Cloud Volumes ONTAP を導入および管理する権限を与えるポリシーも付加します。 link:reference_permissions.html#what-cloud-manager-does-with-aws-permissions["Cloud Manager での権限の使用方法を確認します。"]。
 
@@ -60,9 +60,9 @@ image:screenshot_accounts_switch_aws.gif["[ 詳細と資格情報 ] ページで
 
 === 最初の Azure アカウント
 
-NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager 仮想マシンを導入する権限を持つ Azure アカウントを使用する必要があります。必要な権限は、に表示されます https://mysupport.netapp.com/cloudontap/iampolicies["Azure 向けの NetApp Cloud Central ポリシー"^]。
+NetApp Cloud Central から Cloud Manager を導入する場合は、 Cloud Manager 仮想マシンを導入する権限を持つ Azure アカウントを使用する必要があります。必要な権限は、に表示されます https://["Azure 向けの NetApp Cloud Central ポリシー"^]。
 
-Cloud Central が Azure に Cloud Manager 仮想マシンを導入すると、が有効になります https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システムによって割り当てられた管理 ID"^] Cloud Manager 仮想マシンで、カスタムロールを作成して仮想マシンに割り当てます。この役割は、 Cloud Manager に、その Azure サブスクリプションで Cloud Volumes ONTAP を導入および管理する権限を付与します。 link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Cloud Manager での権限の使用方法を確認します。"]。
+Cloud Central が Azure に Cloud Manager 仮想マシンを導入すると、が有効になります https://["システムによって割り当てられた管理 ID"^] Cloud Manager 仮想マシンで、カスタムロールを作成して仮想マシンに割り当てます。この役割は、 Cloud Manager に、その Azure サブスクリプションで Cloud Volumes ONTAP を導入および管理する権限を付与します。 link:reference_permissions.html#what-cloud-manager-does-with-azure-permissions["Cloud Manager での権限の使用方法を確認します。"]。
 
 image:diagram_permissions_initial_azure.png["クラウドセントラルの導入クラウドマネージャを Azure のアカウントとサブスクリプションに導入した場合の概念を示すイメージ。システムによって割り当てられた管理対象 ID が有効になり、カスタムロールが Cloud Manager 仮想マシンに割り当てられます。"]
 

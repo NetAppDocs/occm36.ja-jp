@@ -50,11 +50,11 @@ image:diagram_tiering.gif["階層化を有効にするワークフローを示�
 
 == AWS でデータを階層化するための要件
 
-Cloud Volumes ONTAP が S3 に接続されていることを確認する必要があります。この接続を提供する最善の方法は、 S3 サービスへの vPC エンドポイントを作成することです。手順については、を参照してください https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS のドキュメント：「 Creating a Gateway Endpoint"^]。
+Cloud Volumes ONTAP が S3 に接続されていることを確認する必要があります。この接続を提供する最善の方法は、 S3 サービスへの vPC エンドポイントを作成することです。手順については、を参照してください https://["AWS のドキュメント：「 Creating a Gateway Endpoint"^]。
 
 vPC エンドポイントを作成するときは、 Cloud Volumes ONTAP インスタンスに対応するリージョン、 vPC 、およびルートテーブルを必ず選択してください。S3 エンドポイントへのトラフィックを有効にする発信 HTTPS ルールを追加するには、セキュリティグループも変更する必要があります。そうしないと、 Cloud Volumes ONTAP は S3 サービスに接続できません。
 
-問題が発生した場合は、を参照してください https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS のサポートナレッジセンター：ゲートウェイ VPC エンドポイントを使用して S3 バケットに接続できないのはなぜですか。"^]。
+問題が発生した場合は、を参照してください https://["AWS のサポートナレッジセンター：ゲートウェイ VPC エンドポイントを使用して S3 バケットに接続できないのはなぜですか。"^]。
 
 
 
@@ -67,7 +67,7 @@ Cloud Manager に必要な権限がある限り、パフォーマンス階層と
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-これらの権限は最新のに含まれています https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager ポリシー"]。
+これらの権限は最新のに含まれています https://["Cloud Manager ポリシー"]。
 
 
 

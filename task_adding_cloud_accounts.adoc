@@ -35,15 +35,15 @@ Cloud Volumes ONTAP を別々の AWS アカウントに導入する場合は、�
 Cloud Manager に IAM ユーザの AWS キーを提供する場合は、必要な権限をそのユーザに付与する必要があります。Cloud Manager IAM ポリシーは、 Cloud Manager が使用できる AWS アクションとリソースを定義します。
 
 .手順
-. から Cloud Manager IAM ポリシーをダウンロードします https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Policies ページ"^]。
+. から Cloud Manager IAM ポリシーをダウンロードします https://["Cloud Manager Policies ページ"^]。
 . IAM コンソールから、 Cloud Manager IAM ポリシーからテキストをコピーアンドペーストして、独自のポリシーを作成します。
 +
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AWS のドキュメント：「 Creating IAM Policies"^]
+https://["AWS のドキュメント：「 Creating IAM Policies"^]
 
 . IAM ロールまたは IAM ユーザにポリシーを関連付けます。
 +
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS のドキュメント：「 Creating IAM Roles"^]
-** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS のドキュメント：「 Adding and Removing IAM Policies"^]
+** https://["AWS のドキュメント：「 Creating IAM Roles"^]
+** https://["AWS のドキュメント：「 Adding and Removing IAM Policies"^]
 
 
 
@@ -64,7 +64,7 @@ Cloud Manager インスタンスを導入したソース AWS アカウントと�
 
 +
 ** Cloud Manager インスタンスが存在するアカウントの ID を入力します。
-** から入手できる Cloud Manager IAM ポリシーを関連付けます https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Policies ページ"^]。
+** から入手できる Cloud Manager IAM ポリシーを関連付けます https://["Cloud Manager Policies ページ"^]。
 +
 image:screenshot_iam_create_role.gif["AWS IAM コンソールの Create role ページを示すスクリーンショット。Select type of trusted entity で、別の AWS アカウントが選択されています。"]
 
@@ -151,7 +151,7 @@ NOTE: 次の手順では、新しい Azure ポータルを使用します。問�
 Cloud Manager に、 Azure で Cloud Volumes ONTAP を起動および管理するために必要な権限を付与するには、カスタムロールが必要です。
 
 .手順
-. をダウンロードします https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure ポリシー"^]。
+. をダウンロードします https://["Cloud Manager Azure ポリシー"^]。
 . 割り当て可能なスコープに Azure サブスクリプション ID を追加して、 JSON ファイルを変更します。
 +
 ユーザが Cloud Volumes ONTAP システムを作成する Azure サブスクリプションごとに ID を追加する必要があります。
@@ -186,7 +186,7 @@ Cloud Manager に、 Azure で Cloud Volumes ONTAP を起動および管理す�
 Cloud Manager が Azure Active Directory で認証できるように、 Active Directory サービスプリンシパルを作成する必要があります。
 
 .作業を開始する前に
-Active Directory アプリケーションを作成し、そのアプリケーションを役割に割り当てるには、 Azure で適切な権限を持っている必要があります。詳細については、を参照してください https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/["Microsoft Azure のドキュメント：「 Use portal to create Active Directory application and service principal that can access resources"^]。
+Active Directory アプリケーションを作成し、そのアプリケーションを役割に割り当てるには、 Azure で適切な権限を持っている必要があります。詳細については、を参照してください https://["Microsoft Azure のドキュメント：「 Use portal to create Active Directory application and service principal that can access resources"^]。
 
 .手順
 . Azure ポータルで、 * Azure Active Directory * サービスを開きます。
@@ -197,7 +197,7 @@ image:screenshot_azure_ad.gif["は、 Microsoft Azure の Active Directory サ�
 . サービスプリンシパルを作成します。
 +
 .. [ 新しいアプリケーション登録 * ] をクリックします。
-.. アプリケーションの名前を入力し、「 * Web app/API * 」を選択したまま、任意の URL を入力します。たとえば、次のように入力します。 http://url[]
+.. アプリケーションの名前を入力し、「 * Web app/API * 」を選択したまま、任意の URL を入力します。たとえば、次のように入力します。 http://[]
 .. [ 作成（ Create ） ] をクリックします。
 
 
@@ -292,7 +292,7 @@ image:screenshot_accounts_switch_azure.gif["[ 詳細と資格情報 ] ページ�
 
 == 追加の Azure サブスクリプションを管理対象 ID に関連付ける
 
-Cloud Manager では、 Cloud Volumes ONTAP を導入する Azure アカウントとサブスクリプションを選択できます。管理対象に別の Azure サブスクリプションを選択することはできません を関連付けない限り、アイデンティティプロファイルを作成します https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["管理された ID"^] それらの登録と。
+Cloud Manager では、 Cloud Volumes ONTAP を導入する Azure アカウントとサブスクリプションを選択できます。管理対象に別の Azure サブスクリプションを選択することはできません を関連付けない限り、アイデンティティプロファイルを作成します https://["管理された ID"^] それらの登録と。
 
 .このタスクについて
 管理対象 ID は最初の ID です link:concept_accounts_and_permissions.html["クラウドプロバイダアカウント"] NetApp Cloud Central から Cloud Manager を導入する場合。Cloud Manager を導入すると、 Cloud Central は OnCommand Cloud Manager オペレータロールを作成し、 Cloud Manager 仮想マシンに割り当てました。
@@ -307,7 +307,7 @@ Cloud Manager では、 Cloud Volumes ONTAP を導入する Azure アカウン�
 *** OnCommand Cloud Manager Operator * ロールを選択します。
 +
 
-NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
 
 *** 仮想マシン * へのアクセスを割り当てます。
 *** Cloud Manager 仮想マシンが作成されたサブスクリプションを選択します。

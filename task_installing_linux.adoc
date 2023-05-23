@@ -39,9 +39,9 @@ AWSCLI のインストールに失敗したというメッセージが表示さ�
 
 
 . レビュー link:reference_cloud_mgr_reqs.html["Cloud Manager ホストの要件"]。
-. からソフトウェアをダウンロードします http://mysupport.netapp.com/NOW/cgi-bin/software["ネットアップサポートサイト"^]をクリックし、 Linux ホストにコピーします。
+. からソフトウェアをダウンロードします http://["ネットアップサポートサイト"^]をクリックし、 Linux ホストにコピーします。
 +
-AWS の EC2 インスタンスに接続してファイルをコピーする方法については、を参照してください http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html["AWS ドキュメント：「 Connecting to Your Linux Instance Using SSH"^]。
+AWS の EC2 インスタンスに接続してファイルをコピーする方法については、を参照してください http://["AWS ドキュメント：「 Connecting to Your Linux Instance Using SSH"^]。
 
 . スクリプトを実行する権限を割り当てます。
 +
@@ -81,13 +81,13 @@ Cloud Manager がインストールされました。プロキシサーバを指
 
 . Web ブラウザを開き、次の URL を入力します。
 +
-https://_ipaddress_:__port__[]
+https://[]
 
 +
 ipaddress _ には、 Cloud Manager ホストの設定に応じて、ローカルホスト、プライベート IP アドレス、またはパブリック IP アドレスを指定できます。たとえば、 Cloud Manager がパブリック IP アドレスのないパブリッククラウドにある場合は、 Cloud Manager ホストに接続されているホストからプライベート IP アドレスを入力する必要があります。
 
 +
-デフォルトの HTTP （ 80 ）ポートまたは HTTPS （ 443 ）ポートを変更した場合は、 _port_is 必須です。たとえば、 HTTPS ポートが 8443 に変更された場合はと入力します https://_ipaddress_:8443[]
+デフォルトの HTTP （ 80 ）ポートまたは HTTPS （ 443 ）ポートを変更した場合は、 _port_is 必須です。たとえば、 HTTPS ポートが 8443 に変更された場合はと入力します https://[]
 
 . NetApp Cloud Central アカウントにサインアップするか、すでにアカウントをお持ちの場合はログインします。
 . サインアップまたはログインすると、 Cloud Manager によって、このシステムの管理者としてユーザアカウントが自動的に追加されます。

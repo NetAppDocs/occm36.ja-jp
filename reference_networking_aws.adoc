@@ -42,25 +42,25 @@ NAT インスタンスがある場合は、プライベートサブネットか�
 HA メディエータのアウトバウンドインターネットアクセス:: HA メディエータインスタンスは、 AWS EC2 サービスへのアウトバウンド接続を持っている必要があります。これにより、ストレージのフェイルオーバーを支援できます。接続を提供するには、パブリック IP アドレスを追加するか、プロキシサーバを指定するか、または手動オプションを使用します。
 +
 --
-手動オプションには、 NAT ゲートウェイまたはターゲットサブネットから AWS EC2 サービスへのインターフェイス VPC エンドポイントを指定できます。VPC エンドポイントの詳細については、を参照してください http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-interface.html["AWS ドキュメント：「 Interface VPC Endpoints 」（ AWS PrivateLink ）"^]。
+手動オプションには、 NAT ゲートウェイまたはターゲットサブネットから AWS EC2 サービスへのインターフェイス VPC エンドポイントを指定できます。VPC エンドポイントの詳細については、を参照してください http://["AWS ドキュメント：「 Interface VPC Endpoints 」（ AWS PrivateLink ）"^]。
 
 --
 セキュリティグループ:: Cloud Manager ではセキュリティグループを作成する必要がないため、セキュリティグループを作成する必要はありません。自分で使用する必要がある場合は、を参照してください link:reference_security_groups.html["セキュリティグループのルール"]。
-Cloud Volumes ONTAP から AWS S3 への接続によるデータ階層化:: EBS をパフォーマンス階層として使用し、 AWS S3 を容量階層として使用する場合は、 Cloud Volumes ONTAP が S3 に接続されていることを確認する必要があります。この接続を提供する最善の方法は、 S3 サービスへの vPC エンドポイントを作成することです。手順については、を参照してください https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["AWS のドキュメント：「 Creating a Gateway Endpoint"^]。
+Cloud Volumes ONTAP から AWS S3 への接続によるデータ階層化:: EBS をパフォーマンス階層として使用し、 AWS S3 を容量階層として使用する場合は、 Cloud Volumes ONTAP が S3 に接続されていることを確認する必要があります。この接続を提供する最善の方法は、 S3 サービスへの vPC エンドポイントを作成することです。手順については、を参照してください https://["AWS のドキュメント：「 Creating a Gateway Endpoint"^]。
 +
 --
 vPC エンドポイントを作成するときは、 Cloud Volumes ONTAP インスタンスに対応するリージョン、 vPC 、およびルートテーブルを必ず選択してください。S3 エンドポイントへのトラフィックを有効にする発信 HTTPS ルールを追加するには、セキュリティグループも変更する必要があります。そうしないと、 Cloud Volumes ONTAP は S3 サービスに接続できません。
 
-問題が発生した場合は、を参照してください https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS のサポートナレッジセンター：ゲートウェイ VPC エンドポイントを使用して S3 バケットに接続できないのはなぜですか。"^]
+問題が発生した場合は、を参照してください https://["AWS のサポートナレッジセンター：ゲートウェイ VPC エンドポイントを使用して S3 バケットに接続できないのはなぜですか。"^]
 
 --
-他のネットワーク内の ONTAP システムへの接続:: AWS の Cloud Volumes ONTAP システムと他のネットワークの ONTAP システムの間でデータをレプリケートするには、 AWS VPC と他のネットワーク（ Azure VNet や企業ネットワークなど）の間に VPN 接続が必要です。手順については、を参照してください https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html["AWS ドキュメント：「 Setting Up an AWS VPN Connection"^]。
+他のネットワーク内の ONTAP システムへの接続:: AWS の Cloud Volumes ONTAP システムと他のネットワークの ONTAP システムの間でデータをレプリケートするには、 AWS VPC と他のネットワーク（ Azure VNet や企業ネットワークなど）の間に VPN 接続が必要です。手順については、を参照してください https://["AWS ドキュメント：「 Setting Up an AWS VPN Connection"^]。
 CIFS 用の DNS と Active Directory:: CIFS ストレージをプロビジョニングする場合は、 AWS で DNS と Active Directory をセットアップするか、オンプレミスセットアップを AWS に拡張する必要があります。
 +
 --
 DNS サーバは、 Active Directory 環境に名前解決サービスを提供する必要があります。デフォルトの EC2 DNS サーバを使用するように DHCP オプションセットを設定できます。このサーバは、 Active Directory 環境で使用される DNS サーバであってはなりません。
 
-手順については、を参照してください https://s3.amazonaws.com/quickstart-reference/microsoft/activedirectory/latest/doc/Microsoft_Active_Directory_Quick_Start.pdf["AWS ドキュメント：「 Active Directory Domain Services on the AWS Cloud ： Quick Start Reference Deployment"^]。
+手順については、を参照してください https://["AWS ドキュメント：「 Active Directory Domain Services on the AWS Cloud ： Quick Start Reference Deployment"^]。
 
 --
 
@@ -102,7 +102,7 @@ vPC （メインルートテーブル）内のサブネットのルートテー�
 
 たとえば、異なるルートテーブルに関連付けられた 2 つのサブネットがあるとします。ルーティングテーブル A を選択し、ルーティングテーブル B は選択しなかった場合、ルーティングテーブル A に関連付けられたサブネット内のクライアントは HA ペアにアクセスできますが、ルーティングテーブル B に関連付けられたサブネット内のクライアントはアクセスできません。
 
-ルーティングテーブルの詳細については、を参照してください http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["AWS のドキュメント：「 Route Tables"^]。
+ルーティングテーブルの詳細については、を参照してください http://["AWS のドキュメント：「 Route Tables"^]。
 
 --
 ネットアップの管理ツールとの連携:: 複数の AZ に展開された HA 構成でネットアップ管理ツールを使用するには、次の 2 つの接続オプションがあります。
@@ -142,7 +142,7 @@ Cloud Manager と Cloud Volumes ONTAP を AWS に導入する方法を理解す�
 
 NOTE: NAT デバイスの代わりに、 HTTP プロキシを使用してインターネット接続を提供できます。
 
-このシナリオの詳細については、を参照してください http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html["AWS ドキュメント：シナリオ 2 ：「 VPC with Public and Private Subnets （ NAT ）」"^]。
+このシナリオの詳細については、を参照してください http://["AWS ドキュメント：シナリオ 2 ：「 VPC with Public and Private Subnets （ NAT ）」"^]。
 
 次の図は、プライベートサブネットで実行されているパブリックサブネットおよびシングルノードシステムで実行されている Cloud Manager を示しています。
 
@@ -159,7 +159,7 @@ NOTE: また、この構成でプロキシサーバを使用して、インタ�
 
 データセンター内の FAS システムと AWS 内の Cloud Volumes ONTAP システムの間でデータをレプリケートする場合は、リンクをセキュアにするために VPN 接続を使用する必要があります。
 
-このシナリオの詳細については、を参照してください http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario4.html["AWS ドキュメント：シナリオ 4 ：プライベートサブネットのみと AWS Managed VPN Access を使用した VPC"^]。
+このシナリオの詳細については、を参照してください http://["AWS ドキュメント：シナリオ 4 ：プライベートサブネットのみと AWS Managed VPN Access を使用した VPC"^]。
 
 次の図は、データセンターで実行されている Cloud Manager と、プライベートサブネットで実行されているシングルノードシステムを示しています。
 

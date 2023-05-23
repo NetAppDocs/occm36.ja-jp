@@ -27,7 +27,7 @@ Cloud Manager は、クラウドまたはネットワークで実行できます
 
 image:diagram_cloud_manager_overview.png["Cloud Manager で管理できるハイブリッドクラウド全体のコンポーネントを示しています。 EC2 コンピューティングの EBS ストレージとして機能する Cloud Volumes ONTAP システム、 Azure ストレージを仮想マシンに提供する Cloud Volumes ONTAP システム、ハイブリッドクラウド環境とマルチクラウド環境全体のデータレプリケーションです。"]
 
-https://www.netapp.com/us/products/data-infrastructure-management/cloud-manager.aspx["Cloud Manager の詳細については、こちらをご覧ください"^]
+https://["Cloud Manager の詳細については、こちらをご覧ください"^]
 
 
 
@@ -47,6 +47,6 @@ Cloud Volumes ONTAP では、次の主要な機能を使用して、エンター
 
 NOTE: Cloud Volumes ONTAP 機能のライセンスは、 ONTAP Volume Encryption を除く に含まれています。
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap/reference_supported_configs_95.html["サポートされている Cloud Volumes ONTAP 構成を表示します"^]
+https://["サポートされている Cloud Volumes ONTAP 構成を表示します"^]
 
-https://www.netapp.com/us/cloud/ontap-cloud-native-product-details["Cloud Volumes ONTAP の詳細については、こちらを参照してください"^]
+https://["Cloud Volumes ONTAP の詳細については、こちらを参照してください"^]

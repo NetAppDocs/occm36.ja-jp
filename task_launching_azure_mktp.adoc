@@ -14,7 +14,7 @@ summary: クラウドマネージャは、 NetApp Cloud Central を使用して 
 
 
 [role="lead"]
-を使用して Azure に Cloud Manager を導入することを推奨します https://cloud.netapp.com["NetApp Cloud Central"^]必要に応じて、 Azure Marketplace から導入することもできます。
+を使用して Azure に Cloud Manager を導入することを推奨します https://["NetApp Cloud Central"^]必要に応じて、 Azure Marketplace から導入することもできます。
 
 Cloud Manager の導入手順については、を参照してください link:task_installing_azure_gov.html["Azure US Government リージョン"] およびインチ link:task_installing_azure_germany.html["Azure ドイツ地域"]。
 
@@ -28,7 +28,7 @@ TIP: Azure Marketplace から Cloud Manager を導入した場合でも、 Cloud
 Cloud Manager をインストールしてセットアップし、それを使用して Azure の Cloud Volumes ONTAP を起動できるようにする必要があります。
 
 .手順
-. https://azure.microsoft.com/en-us/marketplace/partners/netapp/netapp-oncommand-cloud-manager/["Cloud Manager の Azure Marketplace ページにアクセスします。"^]。
+. https://["Cloud Manager の Azure Marketplace ページにアクセスします。"^]。
 . [* Get it Now* ( 今すぐ取得 )] をクリックし、 [* Continue * ( 続行 )] をクリックします。
 . Azure ポータルで、 * Create * をクリックし、手順に従って仮想マシンを設定します。
 +
@@ -43,7 +43,7 @@ link:reference_security_groups_azure.html["Cloud Manager のセキュリティ�
 
 ** [ * 管理 ] で、 [ * オン * ] を選択して、 Cloud Manager に対して * システム割り当ての管理 ID * を有効にします。
 +
-この設定は重要です。管理対象の ID を使用すると、 Cloud Manager 仮想マシンはクレデンシャルを提供することなく Azure Active Directory に自身を識別できます。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Azure リソース用の管理対象 ID の詳細については、こちらをご覧ください"^]。
+この設定は重要です。管理対象の ID を使用すると、 Cloud Manager 仮想マシンはクレデンシャルを提供することなく Azure Active Directory に自身を識別できます。 https://["Azure リソース用の管理対象 ID の詳細については、こちらをご覧ください"^]。
 
 
 
@@ -53,7 +53,7 @@ link:reference_security_groups_azure.html["Cloud Manager のセキュリティ�
 
 . Cloud Manager 仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。
 +
-http://_ipaddress_:80[]
+http://[]
 
 +
 ログインすると、 Cloud Manager によって、このシステムの管理者としてユーザアカウントが自動的に追加されます。
@@ -68,12 +68,12 @@ Cloud Manager のインストールとセットアップが完了しました。
 
 == Cloud Manager への Azure の権限の付与
 
-Azure に Cloud Manager を導入した場合は、を有効にしておく必要があります https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システムによって割り当てられた管理 ID"^]。ここで、必要な Azure 権限を付与する必要があります。そのためには、カスタムロールを作成してから、 1 つ以上のサブスクリプションの Cloud Manager 仮想マシンにそのロールを割り当てます。
+Azure に Cloud Manager を導入した場合は、を有効にしておく必要があります https://["システムによって割り当てられた管理 ID"^]。ここで、必要な Azure 権限を付与する必要があります。そのためには、カスタムロールを作成してから、 1 つ以上のサブスクリプションの Cloud Manager 仮想マシンにそのロールを割り当てます。
 
 .手順
 . Cloud Manager ポリシーを使用してカスタムロールを作成します。
 +
-.. をダウンロードします https://mysupport.netapp.com/cloudontap/iampolicies["Cloud Manager Azure ポリシー"^]。
+.. をダウンロードします https://["Cloud Manager Azure ポリシー"^]。
 .. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、 JSON ファイルを変更します。
 +
 ユーザが Cloud Volumes ONTAP システムを作成する Azure サブスクリプションごとに ID を追加する必要があります。
@@ -105,7 +105,7 @@ Azure に Cloud Manager を導入した場合は、を有効にしておく必�
 *** OnCommand Cloud Manager Operator * ロールを選択します。
 +
 
-NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://mysupport.netapp.com/info/web/ECMP11022837.html["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+NOTE: OnCommand Cloud Manager Operator は、で指定されたデフォルトの名前です https://["Cloud Manager ポリシー"]。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
 
 *** 仮想マシン * へのアクセスを割り当てます。
 *** Cloud Manager 仮想マシンが作成されたサブスクリプションを選択します。

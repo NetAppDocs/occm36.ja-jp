@@ -79,7 +79,7 @@ NOTE: EC2 の要件により、 Cloud Volumes ONTAP の LIF フェイルオー�
 
 
 * Cloud Volumes ONTAP は、 HTTPS を使用して設定バックアップを Cloud Manager に送信します。
-* Cloud Manager にログインすると、からバックアップにアクセスできます https://ipaddress/occm/offboxconfig/[]
+* Cloud Manager にログインすると、からバックアップにアクセスできます https://[]
 * Cloud Manager は、他の管理ツール（ System Manager や CLI など）とは異なるボリューム属性をいくつか設定します。
 +
 次の表に、 Cloud Manager がデフォルトとは異なる設定にしたボリューム属性を示します。

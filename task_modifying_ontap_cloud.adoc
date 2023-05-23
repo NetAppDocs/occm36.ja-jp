@@ -23,7 +23,7 @@ summary: ストレージのニーズの変化に応じて、 Cloud Volumes ONTAP
 Cloud Manager がネットアップから BYOL ライセンスファイルを取得できない場合は、ご自身でファイルを取得し、 Cloud Manager に手動でアップロードして、 Cloud Volumes ONTAP システムにライセンスをインストールできるようにします。
 
 .手順
-. にアクセスします https://register.netapp.com/register/getlicensefile["ネットアップライセンスファイルジェネレータ"^] をクリックし、ネットアップサポートサイトのクレデンシャルでログインします。
+. にアクセスします https://["ネットアップライセンスファイルジェネレータ"^] をクリックし、ネットアップサポートサイトのクレデンシャルでログインします。
 . パスワードを入力し、製品（ NetApp Cloud Volumes ONTAP BYOL for AWS * 、 * NetApp Cloud Volumes ONTAP BYOL for Azure * 、または * NetApp Cloud Volumes ONTAP BYOL HA for AWS * ）を選択してシリアル番号を入力し、プライバシーポリシーを読み、承認したことを確認してから、 * Submit * をクリックします。
 +
 * 例 *
