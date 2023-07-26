@@ -209,7 +209,5 @@ sidebar:
       url: "/reference_user_roles.html"
     - title: 関連リンク
       url: "/reference_additional_info.html"
-  - title: 以前のバージョン
-    url: "/reference_earlier_versions.html"
   - title: 法的通知
     url: "/reference_legal_notices.html"
